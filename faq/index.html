@@ -16,13 +16,15 @@
 		</div>
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">What is SourceBans++?</h3>
+				<h3 class="panel-title">What is SourceBans++? And how is it different from Sourceban?</h3>
 			</div>
 			<div class="panel-body">
-				SourceBans++ is a global administration system for multiple Source based game servers where admins and bans can be added across more than one server.
+				<p>SourceBans++ is a global administration system for multiple Source based game servers where admins and bans can be added across more than one server.</p>
+				
+				<p>SourceBans++ builds upon Sourceban. It includes many community made customizations and modifications to make the SourceBans experience better and it's actively maintained with Sourceban++2.0 on its way</p>
 			</div>
 		</div>
-		<div class="panel panel-info">
+		<div id="ports" class="panel panel-info">
 			<div class="panel-heading">
 				<h3 class="panel-title">Which ports does the SourceBans Web-Panel require to be open?</h3>
 			</div>
@@ -35,12 +37,98 @@
 				<p>You should always check beforehand, if your gameserver banned your webserver's ip with <code>listip</code> in rcon. Remove it from the banned_ip.cfg and <code>removeip IP</code> via rcon.</p>
 			</div>
 		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Why is the "Ban player" option missing in SourceMod's admin menu?</h3>
+			</div>
+			<div class="panel-body">
+				<p>Most likely SourceMod's basebans.smx was still loaded when you installed SourceBans' game plugin. The game plugin automatically disables basebans.smx, but your server needs to be restarted for the "Ban player" option to come available.</p>
+				<p>Some hosters might disallow plugins to move files. Make sure the basebans.smx is in the plugins/disabled folder.</p>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Player list displays "Max Players" instead of all the players</h3>
+			</div>
+			<div class="panel-body">
+				<img class="thumbnail" src="/images/not_showing_players.png" alt="Not showing players">
+				<p>Add <code>host_players_show 2</code> to your `server.cfg` or any startup config file</p>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">I wish to translate Sourceban++ for my community</h3>
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<h4 class="text-center">Website</h4>
+						<ul class="list-group">
+							<li class="list-group-item">Copy the theme you want to translate into a new folder</li>
+							<li class="list-group-item">Modify all files ending in <code>.tpl</code> with the translation</li>
+							<li class="list-group-item">Modify <code>theme.conf.php</code> while following theme license outline</li>
+							<li class="list-group-item">Enable the theme in web panel setting and you're done</li>
+						</ul>
+					</div>
+					<div class="col-md-6" style="border-left:1px solid #DDD;">
+						<h4 class="text-center">Plugin</h4>
+						<ul class="list-group">
+							<li class="list-group-item">Before you get started, you'll need a basic understanding of syntax or else you'll mess it up</li>
+							<li class="list-group-item">Navigate to Sourcemod's <code>translations</code> directory</li>
+							<li class="list-group-item">Open <code>sourcebans.phrases.txt</code>, <code>sourcecomms.phrases.txt</code>, and <code>sourcesleuth.phrases.txt</code></li>
+							<li class="list-group-item">Follow <a href="https://wiki.alliedmods.net/Translations_(SourceMod_Scripting)" target="_blank">this guide</a> for modifying the translation files</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">
+				<h3 class="panel-title">Where can I get additional support?</h3>
+			</div>
+			<div class="panel-body">
+				<a href="https://discord.gg/xrHKh5g" target="_blank"><img src="/images/Discord.gif" alt="Discord"></a>
+			</div>
+		</div>
 		<div class="panel panel-warning">
 			<div class="panel-heading">
 				<h3 class="panel-title">Why is the Web-Panel showing "Error Connecting (IP:PORT)" for my server, when it's actually Online?</h3>
 			</div>
 			<div class="panel-body">
-				See <b>Which ports does the SourceBans webpanel require to be open?</b>.
+				See <a href="#ports"><b>Which ports does the SourceBans webpanel require to be open?</b></a>.
+			</div>
+		</div>
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h3 class="panel-title">My Banlist doesn't show up, but all other pages do. What can I do?</h3>
+			</div>
+			<div class="panel-body">
+				<p>Your PHP configuration restricts SourceBans to a certain amount of memory.<br />
+				When viewing the Banlist it tries to lookup the according country for the IP. This is done by loading a ~7MB database file into the memory.</p>
+				<p>There are several ways to solve this.</p>
+				<ul class="list-group">
+					<li class="list-group-item">Remove the '//' in front of this line in your config.php: <code>define('SB_MEM', '128M');</code></li>
+					<li class="list-group-item">Ask your webhost to increase the PHP '<code>memory_limit</code>' setting.</li>
+					<li class="list-group-item">If it still doesn't show up, check the box for 'No Country Research' in your webpanel settings page.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h3 class="panel-title">Why is Sourceban++ not sending email reports to me (the owner)?</h3>
+			</div>
+			<div class="panel-body">
+				<p>This is because, by default, the owner account is not assigned to any permission group.</p>
+				
+				<p>Navigate to <code>Admin Settings</code>, edit, and assign yourself to an admin group</p>
+			</div>
+		</div>
+		<div class="panel panel-warning">
+			<div class="panel-heading">
+				<h3 class="panel-title">I accidently locked myself out by having Steam only login, how can I fix this?</h3>
+			</div>
+			<div class="panel-body">
+				<p>Using a database query tool (PHPMyAdmin), goto <code>_settings</code> table and modify <code>config.enablesteamlogin</code> setting and set the value to <code>1</code>
 			</div>
 		</div>
 		<div class="panel panel-danger">
@@ -54,31 +142,6 @@
 				<p>In most cases, the error message will be self explanatory, but if you need help, then post on our forums.</p>
 			</div>
 		</div>
-		<div class="panel panel-warning">
-			<div class="panel-heading">
-				<h3 class="panel-title">My Banlist doesn't show up, but all other pages do. What can I do?</h3>
-			</div>
-			<div class="panel-body">
-				<p><b><u>MARIADB IS CURRENTLY NOT SUPPORTED</u></b></p>
-				<p>Your PHP configuration restricts SourceBans to a certain amount of memory.<br />
-				When viewing the Banlist it tries to lookup the according country for the IP. This is done by loading a ~7MB database file into the memory.</p>
-				<p>There are several ways to solve this.</p>
-				<ul>
-				<li>Remove the '//' in front of this line in your config.php: <code>define('SB_MEM', '128M');</code></li>
-				<li>Ask your webhost to increase the PHP '<code>memory_limit</code>' setting.</li>
-				<li>If it still doesn't show up, check the box for 'No Country Research' in your webpanel settings page.</li>
-				</ul>
-			</div>
-		</div>	
-		<div class="panel panel-info">
-			<div class="panel-heading">
-				<h3 class="panel-title">Why is the "Ban player" option missing in SourceMod's admin menu?</h3>
-			</div>
-			<div class="panel-body">
-				<p>Most likely SourceMod's basebans.smx was still loaded when you installed SourceBans' game plugin. The game plugin automatically disables basebans.smx, but your server needs to be restarted for the "Ban player" option to come available.</p>
-				<p>Some hosters might disallow plugins to move files. Make sure the basebans.smx is in the plugins/disabled folder.</p>
-			</div>
-		</div>		
 		<div class="panel panel-danger">
 			<div class="panel-heading">
 				<h3 class="panel-title">Why does the game plugin error log tell me "Database failure: Could not find database conf "sourcebans"?</h3>
@@ -96,12 +159,34 @@
 				<p>If the error message reads "Can't connect to local MySQL server through socket", you need to find the "sourcebans" section in databases.cfg and change the value of "host" from "localhost" to the path of your mysql.sock file. If you don't know where mysql.sock is located, ask your gameserver host.<br />
 				&nbsp;</p>
 				<p>Otherwise, most likely your MySQL server does not allow incoming connections from your gameserver. To fix this, you can do either of the following:</p>
-				<ul>				
-				<li>Go into your webserver's control panel and check if there's a section called MySQL Access Hosts, Remote MySQL or something named similar. There you can add the IP address mentioned in the error. This is usually the IP of your gameserver, but it can also be slightly different, so make sure you copy and paste it exactly from the error.</li>
-				<li>The other option is to run the following query on your SourceBans database (for example using phpMyAdmin):<br />
-				GRANT ALL ON database.* TO 'username'@'ip';</li>
+				<ul class="list-group">				
+					<li class="list-group-item">Go into your webserver's control panel and check if there's a section called MySQL Access Hosts, Remote MySQL or something named similar. There you can add the IP address mentioned in the error. This is usually the IP of your gameserver, but it can also be slightly different, so make sure you copy and paste it exactly from the error.</li>
+					<li class="list-group-item">The other option is to run the following query on your SourceBans database (for example using phpMyAdmin): <code>GRANT ALL ON database.* TO 'username'@'ip';</code></li>
 				</ul>
 				<p>You will have to replace "database" with your SourceBans database name, and "username" and "ip" with those mentioned in the error.</p>
+			</div>
+		</div>
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+				<h3 class="panel-title">I'm getting: Could not find driver "mysql"</h3>
+			</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item">Please make sure <code>dbi.mysql.ext.so</code> (<code>dbi.mysql.ext.dll</code> on Windows) extension exists and check if it is loaded via <code>sm exts list</code></li>
+					<li class="list-group-item">Make sure the extension is executable via <code>chmod u+x dbi.mysql.ext.so</code></li>
+					<li class="list-group-item">
+						<p>Install <code>zlib</code> (<b>Requires SSH</b>):</p>
+						<ul class="list-group">
+							<li class="list-group-item">32-Bit Debian/Ubuntu: <code>apt-get install zlib1g</code></li>
+							<li class="list-group-item">64-Bit Debian/Ubuntu: <code>apt-get install lib32z1</code></li>
+							<li class="list-group-item">32/64-Bit Fedora: <code>yum install zlib.i686</code></li>
+							<li class="list-group-item">32/64-Bit Mandriva: <code>urpmi zlib1</code></li>
+							<li class="list-group-item">32-Bit SUSE: <code>zypper install libz1</code></li>
+							<li class="list-group-item">64-Bit SUSE: <code>zypper install libz1-32bit</code></li>
+						</ul>
+					</li>
+					<li class="list-group-item">If all of the above does not work, use <code>ldd -d -r dbi.mysql.ext.so</code> to look for missing dependencies, and use Google to look them up</li>
+				</ul>
 			</div>
 		</div>
 		<div class="page-header page-banner forceup"></div>
