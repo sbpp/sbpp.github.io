@@ -1,0 +1,34 @@
+"Updater"
+{
+	"Information"
+	{
+		"Version"
+		{
+			"Latest"	"1.6.1"
+		}
+		
+		"Notes"	"More info @ https://sbpp.github.io"
+	}
+	
+	"Files"
+	{
+		"Plugin"	"Path_SM/plugins/sbpp_main.smx"
+		"Plugin"	"Path_SM/plugins/sbpp_admcfg.smx"
+		"Plugin"	"Path_SM/plugins/sbpp_comms.smx"
+		"Plugin"	"Path_SM/plugins/sbpp_sleuth.smx"
+		"Plugin"	"Path_SM/plugins/sbpp_checker.smx"
+		"Plugin"	"Path_SM/translations/sourcebans.phrases.txt"
+		"Plugin"	"Path_SM/translations/sourcecomms.phrases.txt"
+		"Plugin"	"Path_SM/translations/sourcesleuth.phrases.txt"
+		
+		"Source"	"Path_SM/scripting/sbpp_main.sp"
+		"Source"	"Path_SM/scripting/sbpp_admcfg.sp"
+		"Source"	"Path_SM/scripting/sbpp_admcfg/sbpp_admin_groups.sp"
+		"Source"	"Path_SM/scripting/sbpp_admcfg/sbpp_admin_users.sp"
+		"Source"	"Path_SM/scripting/sbpp_comms.sp"
+		"Source"	"Path_SM/scripting/sbpp_sleuth.sp"
+		"Source"	"Path_SM/scripting/sbpp_checker.sp"
+		"Source"	"Path_SM/scripting/include/sourcebans.inc"
+		"Source"	"Path_SM/scripting/include/sourcecomms.inc"
+	}
+}
