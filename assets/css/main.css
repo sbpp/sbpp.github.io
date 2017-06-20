@@ -1954,6 +1954,10 @@
 		text-align: center;
 	}
 
+	section.cover, article.cover {
+		height: 100vh;
+	}
+
 	header p {
 		color: #999;
 		margin: 0 0 1.5em 0;
@@ -2330,6 +2334,13 @@
 			.image.fit img {
 				width: 100%;
 			}
+
+		.image.responsive {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
 
 /* List */
 
