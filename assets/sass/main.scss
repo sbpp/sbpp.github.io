@@ -200,6 +200,10 @@
 		&.special {
 			text-align: center;
 		}
+		
+		&.cover {
+			height: 100vh; //http://caniuse.com/#feat=viewport-units	
+		}
 	}
 
 	header {
@@ -519,6 +523,12 @@
 			img {
 				width: 100%;
 			}
+		}
+		
+		&.responsive {
+			display: block;
+			max-width: 100%;
+			height: auto;
 		}
 	}
 
