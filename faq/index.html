@@ -25,7 +25,8 @@
 		</div>
 		<div id="ports" class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">Which ports does the SourceBans Web-Panel require to be open?</h3>
+				<span class="label label-info">Web Panel</span>
+				<b>Which ports does the SourceBans Web-Panel require to be open?</b>
 			</div>
 			<div class="panel-body">
 				<p>If your web panel shows <strong>Error Connecting</strong> for your game server when it is actually online,<br />
@@ -38,7 +39,8 @@
 		</div>
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">Why is the "Ban player" option missing in SourceMod's admin menu?</h3>
+				<span class="label label-info">Plugin</span>
+				<b>Why is the "Ban player" option missing in SourceMod's admin menu?</b>
 			</div>
 			<div class="panel-body">
 				<p>Most likely SourceMod's basebans.smx was still loaded when you installed SourceBans' game plugin. The game plugin automatically disables basebans.smx, but your server needs to be restarted for the "Ban player" option to come available.</p>
@@ -47,7 +49,8 @@
 		</div>
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">Player list displays "Max Players" instead of all the players</h3>
+				<span class="label label-info">Web Panel</span>
+				<b>Player list displays "Max Players" instead of all the players</b>
 			</div>
 			<div class="panel-body">
 				<img class="thumbnail" src="/images/not_showing_players.png" alt="Not showing players">
@@ -56,7 +59,8 @@
 		</div>
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">I wish to translate Sourcebans++ for my community</h3>
+				<span class="label label-info">Web Panel/Plugin</span>
+				<b>I wish to translate Sourcebans++ for my community</b>
 			</div>
 			<div class="panel-body">
 				<div class="row">
@@ -83,15 +87,23 @@
 		</div>
 		<div class="panel panel-info">
 			<div class="panel-heading">
-				<h3 class="panel-title">Where can I get additional support?</h3>
+				<span class="label label-info"></span>
+				<b>Where can I get additional support?</b>
 			</div>
 			<div class="panel-body">
+				<p>Before proceeding to ask for help, please have these files ready</p>
+				<ul class="list-group">
+					<li class="list-group-item">Web Panel Related: <code>error.log</code>. For apache, it typically resides in <code>/var/log/apache2/</code>. Check the location via <code>error_log</code> in your <code>php.ini</code> file</li>
+					<li class="list-group-item">Plugin Related: <code>errors_%DATE%.log</code>, located in <code>tf/addons/sourcemod/logs</code></li>
+				</ul>
+				<p>After you gather the necessary log files, join our Discord using the button below.</p>
 				<a href="https://discord.gg/4Bhj6NU" target="_blank"><img src="/images/Discord.gif" alt="Discord"></a>
 			</div>
 		</div>
 		<div class="panel panel-warning">
 			<div class="panel-heading">
-				<h3 class="panel-title">Why is the Web-Panel showing "Error Connecting (IP:PORT)" for my server, when it's actually Online?</h3>
+					<span class="label label-info">Web Panel</span>
+					<b>Why is the Web-Panel showing "Error Connecting (IP:PORT)" for my server, when it's actually Online?</b>
 			</div>
 			<div class="panel-body">
 				See <a href="#ports"><b>Which ports does the SourceBans webpanel require to be open?</b></a>.
@@ -99,7 +111,8 @@
 		</div>
 		<div class="panel panel-warning">
 			<div class="panel-heading">
-				<h3 class="panel-title">My Banlist doesn't show up, but all other pages do. What can I do?</h3>
+				<span class="label label-info">Web Panel</span>
+				<b>My Banlist doesn't show up, but all other pages do. What can I do?</b>
 			</div>
 			<div class="panel-body">
 				<p>Your PHP configuration restricts SourceBans to a certain amount of memory.<br />
@@ -114,7 +127,8 @@
 		</div>
 		<div class="panel panel-warning">
 			<div class="panel-heading">
-				<h3 class="panel-title">Why is Sourcebans++ not sending email reports to me (the owner)?</h3>
+				<span class="label label-info">Web Panel</span>
+				<b>Why is Sourcebans++ not sending email reports to me (the owner)?</b>
 			</div>
 			<div class="panel-body">
 				<p>This is because, by default, the owner account is not assigned to any permission group.</p>
@@ -124,7 +138,8 @@
 		</div>
 		<div class="panel panel-warning">
 			<div class="panel-heading">
-				<h3 class="panel-title">I accidently locked myself out by having Steam only login, how can I fix this?</h3>
+				<span class="label label-info">Web Panel</span>
+				<b>I accidently locked myself out by having Steam only login, how can I fix this?</b>
 			</div>
 			<div class="panel-body">
 				<p>Using a database query tool (PHPMyAdmin), goto <code>_settings</code> table and modify <code>config.enablesteamlogin</code> setting and set the value to <code>1</code>
@@ -132,7 +147,8 @@
 		</div>
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">Why is the webpanel showing me a blank white page?</h3>
+				<span class="label label-info">Web Panel</span>
+				<b>Why is the webpanel showing me a blank white page?</b>
 			</div>
 			<div class="panel-body">
 				<p>This is because PHP has encountered a fatal error and cannot show any more of the page.</p>
@@ -143,7 +159,8 @@
 		</div>
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">Why does the game plugin error log tell me "Database failure: Could not find database conf "sourcebans"?</h3>
+				<span class="label label-info">Plugin</span>
+				<b>Why does the game plugin error log tell me "Database failure: Could not find database conf "sourcebans"?</b>
 			</div>
 			<div class="panel-body">
 				<p>You forgot to add the "sourcebans" section to SourceMod's databases.cfg, as instructed in the installation.</p>
@@ -152,7 +169,8 @@
 		</div>
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">I get the following error: Database failure: [1044/1045/1130/2002/2003]</h3>
+				<span class="label label-info">Plugin</span>
+				<b>I get the following error: Database failure: [1044/1045/1130/2002/2003]</b>
 			</div>
 			<div class="panel-body">
 				<p>If the error message reads "Can't connect to local MySQL server through socket", you need to find the "sourcebans" section in databases.cfg and change the value of "host" from "localhost" to the path of your mysql.sock file. If you don't know where mysql.sock is located, ask your gameserver host.<br />
@@ -167,7 +185,8 @@
 		</div>
 		<div class="panel panel-danger">
 			<div class="panel-heading">
-				<h3 class="panel-title">I'm getting: Could not find driver "mysql"</h3>
+				<span class="label label-info">Plugin</span>
+				<b>I'm getting: Could not find driver "mysql"</b>
 			</div>
 			<div class="panel-body">
 				<ul class="list-group">
