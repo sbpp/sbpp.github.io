@@ -7,7 +7,7 @@ draft: false
 
 ## I'm having difficulty installing SourceBans++, can you help me?
 
-We would love to! But first, we would like you read through our [quickstart](/docs/quickstart) first!
+We would love to! But first, we would like you read through our [quickstart](/docs/quickstart) and [inquiries](/docs/inquiries) first!
 If you are still having problem after that, feel free ask for help in <samp>#help-support</samp> in our [Discord](https://discord.gg/4Bhj6NU)
 
 ## What's the progress on SourceBans++ 2.0?
