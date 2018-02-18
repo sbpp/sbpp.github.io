@@ -22,7 +22,7 @@ googleAnalytics = "UA-68577666-5"
         name = "Blog"
         weight = -100
         url = "/blog/"
-#[[menu.main]]
-#    name = "Faq"
-#    weight = -100
-#    url = "/faq/"
+[[menu.main]]
+    name = "Faq"
+    weight = -100
+    url = "/faq/"
