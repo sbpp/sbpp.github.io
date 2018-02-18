@@ -1,14 +1,12 @@
-# Binaries for programs and plugins
-*.exe
-*.dll
-*.so
-*.dylib
+# Hugo default output directory
+/public
 
-# Test binary, build with `go test -c`
-*.test
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
 
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-# Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
-.glide/
+# OSX
+.DS_Store
