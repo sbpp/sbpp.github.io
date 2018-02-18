@@ -2,7 +2,7 @@
 title = "Adding Server"
 description = "Adding a server"
 date = 2018-02-18T15:27:00-05:00
-weight = 22
+weight = 23
 draft = false
 bref = "How to start importing your servers into SourceBans++"
 toc = true
