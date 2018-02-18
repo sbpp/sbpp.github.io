@@ -10,7 +10,7 @@ draft: false
 We would love to! But first, we would like you read through our [quickstart](/docs/quickstart) and [inquiries](/docs/inquiries) first!
 If you are still having problem after that, feel free ask for help in <samp>#help-support</samp> in our [Discord](https://discord.gg/4Bhj6NU) guild
 
-## What's the progress on SourceBans++ 2.0?
+## When will SourceBans++ 2.0 be released?
 
 Next Summer in Valve Time&trade;
 
