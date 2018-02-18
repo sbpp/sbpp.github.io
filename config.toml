@@ -6,8 +6,8 @@ description = "Global admin, ban, and communication management system for the So
 Paginate = 4
 [Params]
   RSSLink = "/index.xml"
-  author = "RumbleFrog" # add your company name
-  github = "RumbleFrog" # add your github profile name
+  author = "SourceBans++" # add your company name
+  github = "sbpp" # add your github profile name
   twitter = "RumbleFrog_" # add your twitter profile
   email = "rumblefrog@protonmail.com"
 
