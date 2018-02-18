@@ -4,12 +4,15 @@ title = "SourceBans++"
 theme = "kube"
 description = "Global admin, ban, and communication management system for the Source engine"
 Paginate = 4
+googleAnalytics = "UA-68577666-5"
 [Params]
   RSSLink = "/index.xml"
   author = "SourceBans++" # add your company name
   github = "sbpp" # add your github profile name
   twitter = "RumbleFrog_" # add your twitter profile
   email = "rumblefrog@protonmail.com"
+[Params.seo.webmaster_verifications]
+  google = "NMu_qHiZPOvLzW1_DvAKrQfdQUAOdKxGnjbI8oa0cGo"
 
 [[menu.main]]
     name = "Docs"
