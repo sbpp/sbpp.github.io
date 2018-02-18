@@ -1,7 +1,7 @@
 +++
-title = "Introduction"
+title = "New Site"
 date = 2018-02-17T23:31:41-05:00
-description = "Brief Summary"
+description = "What's this? A new site?"
 weight = 20
 draft = false
 +++
