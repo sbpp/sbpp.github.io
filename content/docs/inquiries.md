@@ -45,6 +45,12 @@ Add `host_players_show 2` to your `server.cfg` or any startup config file
 2. The files you need to modify are `sourcebans.phrases.txt`, `sourcecomms.phrases.txt`, and `sourcesleuth.phrases.txt`
 3. Following [SourceMod's Translation Guide](https://wiki.alliedmods.net/Translations_(SourceMod_Scripting)), modify the files accordingly
 
+### <span class="label success outline">Web</span> How do I remove the message "Your new SourceBans install SourceBans successfully installed!"
+
+1. Navigate to <mark>Admin Panel</mark> -> <mark>Webpanel Settings</mark>
+2. Edit the <mark>Intro Text</mark>
+3. <mark>Save Changes</mark> and you are done
+
 ### <span class="label success outline">Web</span> Why is the Web-Panel showing "Error Connecting (IP:PORT)" for my server, when it's actually Online?
 
 See [Which ports does the SourceBans Web-Panel require to be open?](#span-class-label-success-outline-web-span-which-ports-does-the-sourcebans-web-panel-require-to-be-open)
