@@ -15,10 +15,11 @@ Download the latest zip-archive from the <a href="https://github.com/sbpp/source
 ### Web Panel
 
 1. Backup your database in case of corruption
-2. Upload and overwrite all contents in <mark>web</mark> to your SourceBans++ installation
-3. Delete <mark>install</mark> directory
-4. Navigate to your SourceBans++ website and append <mark>updater</mark> after it (Ex: <samp>example.com/updater</samp>, <samp>example.com/sb/updater</samp>)
-5. After it displays <mark>Installation up-to-date.</mark>, delete <mark>updater</mark> directory and you are done
+2. Switch back to the default theme if haven't already
+3. Upload and overwrite all contents in <mark>web</mark> to your SourceBans++ installation
+4. Delete <mark>install</mark> directory
+5. Navigate to your SourceBans++ website and append <mark>updater</mark> after it (Ex: <samp>example.com/updater</samp>, <samp>example.com/sb/updater</samp>)
+6. After it displays <mark>Installation up-to-date.</mark>, delete <mark>updater</mark> directory and you are done
 
 ### Plugin
 
