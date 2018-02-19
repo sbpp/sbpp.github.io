@@ -1,0 +1,40 @@
+#Use the new container-based infrastructure
+sudo: false
+language: go
+
+#Install the apt prerequisites
+addons:
+  apt_packages:
+    - python-pygments
+
+#Set the build environment
+env:
+  - HUGOV=0.36.1
+
+#Clean and don't fail
+install:
+  - rm -rf public || exit 0
+
+#Download Hugo
+before_script:
+  - mkdir binaries
+  - wget "https://github.com/gohugoio/hugo/releases/download/v$HUGOV/hugo_$HUGOV_Linux-64bit.tar.gz" -O binaries/hugo_$HUGOV_Linux-64bit.tar.gz
+  - cd binaries
+  - tar -xzf hugo_$HUGOV_Linux-64bit.tar.gz
+  - chmod +x hugo
+  - cd ..
+
+#Build the website
+script:
+  - cd src
+  - ../binaries/hugo
+
+#Deploy to GitHub pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  keep_history: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: test
