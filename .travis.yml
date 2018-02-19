@@ -26,14 +26,13 @@ before_script:
 
 #Build the website
 script:
-  - cd src
-  - ../binaries/hugo
+  - binaries/hugo
 
 #Deploy to GitHub pages
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: src/public
+  local_dir: public
   github_token: $GITHUB_TOKEN
   keep-history: true
   target-branch: master
