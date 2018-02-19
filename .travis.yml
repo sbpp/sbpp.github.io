@@ -35,5 +35,6 @@ deploy:
   skip_cleanup: true
   local_dir: src/public
   github_token: $GITHUB_TOKEN
+  target-branch: master
   on:
     branch: src
