@@ -47,6 +47,5 @@ Temporary Items
 /nbproject/
 
 # Hugo
-/src/public
-/src/dev
-
+public
+dev
