@@ -13,7 +13,7 @@ toc = true
 Before we get started, let's make sure you meet these following requirements:
 
 - Web
-  - A working MySQL/MariaDB database
+  - A working MySQL/[MariaDB](/docs/mariadb) database
   - PHP Version >= 5.3
 - Game
   - Sourcemod
