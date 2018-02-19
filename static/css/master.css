@@ -1028,6 +1028,7 @@ tr.border-none td {
 #footer {
   display: flex;
   border-top: 1px solid #eee;
+  margin-top: 104px;
   padding: 0 28px;
   padding-top: 24px;
   font-size: 13px;
