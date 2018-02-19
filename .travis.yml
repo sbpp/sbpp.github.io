@@ -18,7 +18,7 @@ install:
 #Download Hugo
 before_script:
   - mkdir binaries
-- wget "https://github.com/gohugoio/hugo/releases/download/v${HUGOV}/hugo_${HUGOV}_Linux-64bit.tar.gz" -O binaries/hugo_${HUGOV}_Linux-64bit.tar.gz
+  - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGOV}/hugo_${HUGOV}_Linux-64bit.tar.gz" -O binaries/hugo_${HUGOV}_Linux-64bit.tar.gz
   - cd binaries
   - tar -xzf hugo_${HUGOV}_Linux-64bit.tar.gz
   - chmod +x hugo
