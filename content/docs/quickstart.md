@@ -14,10 +14,10 @@ Before we get started, let's make sure you meet these following requirements:
 
 - Web
   - A working MySQL/[MariaDB](/docs/mariadb) database
-  - PHP Version >= 5.3
+  - PHP Version >= 5.6
 - Game
-  - Sourcemod
-  - Metamod
+  - Sourcemod >= 1.7
+  - Metamod: Source
 
 
 ### Uploading
