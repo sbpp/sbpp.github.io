@@ -8,7 +8,8 @@
     <p>{{.Description}}</p>
   </div>
   <div id="action-buttons">
-    <a class="button primary big" href="https://github.com/sbpp/sourcebans-pp/releases" onclick="_gaq.push(['_trackEvent', 'kube', 'download']);">Download</a> <a class="button outline big" href="https://github.com/sbpp/sourcebans-pp/" onclick="_gaq.push(['_trackEvent', 'kube', 'github']);">View on Github</a>
+    <a class="button primary big" href="https://github.com/sbpp/sourcebans-pp/releases" onclick="ga('send', 'event', 'link', 'click', 'download');">Download</a>
+    <a class="button outline big" href="https://github.com/sbpp/sourcebans-pp/" onclick="ga('send', 'event', 'link', 'click', 'github');">View on Github</a>
     <p>Zip-archive, includes all the source and site files</p>
   </div>
   <div class="message focus text-center" data-component="message"> <span class="close small"></span>
