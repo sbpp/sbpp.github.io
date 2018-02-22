@@ -20,10 +20,10 @@ googleAnalytics = "UA-68577666-5"
     name = "Docs"
     weight = -100
     url = "/docs/"
-[[menu.main]]
-        name = "Blog"
-        weight = -100
-        url = "/blog/"
+#[[menu.main]]
+#        name = "Blog"
+#        weight = -100
+#        url = "/blog/"
 [[menu.main]]
     name = "FAQ"
     weight = -100
