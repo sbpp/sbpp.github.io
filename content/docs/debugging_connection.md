@@ -37,7 +37,7 @@ Once complete, navigate to the file in your browser, and if done properly it wil
 
 - Make sure your host is not blocking <samp>UDP Incoming</samp>
 - If hosting locally, make sure you are port forwarding correctly
-- Make sure your game server did not ban your web server's IP using `listip`, if banned: remove it from `banned_ip.cfg` and using `removeip IP` via RCON
+- Make sure your game server did not ban your web server's IP using `listip`, if banned: remove it from `cfg/banned_ip.cfg` and using `removeip IP` via RCON
 
 ### TCP Error
 
