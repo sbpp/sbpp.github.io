@@ -15,3 +15,5 @@
   - You may also explicitly set `translationKey` front matter within the article for good measures
 - Create a new block within `config.toml` adding the language translations for the global variables
 - Submit pull request
+
+##### For more information, view [Hugo's Documentation](https://gohugo.io/documentation/)
