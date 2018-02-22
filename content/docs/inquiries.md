@@ -18,7 +18,7 @@ ask your web host to open <mark>TCP outgoing</mark> to your game server port (us
 
 Use sb_debug_connection.php, a small testing script to get more detailed debugging information. Open the php file and add your gameserver's ip and port as described in the comments.
 
-You should always check beforehand, if your gameserver banned your webserver's ip with `listip` in rcon. Remove it from the `banned_ip.cfg` and `removeip` IP via rcon.
+You should always check beforehand, if your gameserver banned your webserver's ip with `listip` in rcon. Remove it from the `banned_ip.cfg` and `removeip IP` via rcon.
 
 ### <span class="label success outline">Plugin</span> Ban player option is missing in SourceMod's admin menu!</h3>
 
