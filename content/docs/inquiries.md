@@ -76,10 +76,6 @@ Navigate to <mark>Admin Settings</mark>, edit, and assign yourself to an admin g
 
 Using a database query tool (Ex: PHPMyAdmin), goto `_settings` table and modify `config.enablesteamlogin` setting and set the value to `1`
 
-### <span class="label success outline">Web</span> SourceBans++ freezes my browser!
-
-Turn off Rocket Loader in CloudFlare
-
 ### <span class="label success outline">Web</span> Why is the webpanel showing me a blank white page?
 
 This is because PHP has encountered a fatal error and cannot show any more of the page.
