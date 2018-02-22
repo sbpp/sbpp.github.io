@@ -19,7 +19,7 @@ Before we get started, let's make sure you meet these following requirements:
   - Sourcemod >= 1.7
   - Metamod: Source
   
-  If you're using Cloudflare, Rocket Loader must be disabled otherwise sourcebans won't function correctly.
+  If you're using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.
 
 
 ### Uploading
