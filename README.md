@@ -12,7 +12,7 @@
 - Fork this repository
 - Translate the files in `content/` by making another copy of the article and appending to the extension
   - Ex: `content/docs/updating.md` -> `content/docs/updating.fr.md`
-  - You may also explicitly set `translationKey` front matter within the article for good measures
+  - You may also explicitly set `translationKey` in front matter within the article for good measures
 - Create a new block within `config.toml` adding the language translations for the global variables
 - Submit pull request
 
