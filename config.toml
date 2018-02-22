@@ -8,9 +8,10 @@ googleAnalytics = "UA-68577666-5"
 
 [Params]
   RSSLink = "/index.xml"
-  author = "SourceBans++" # add your company name
-  github = "sbpp" # add your github profile name
-  twitter = "RumbleFrog_" # add your twitter profile
+  author = "SourceBans++"
+  github = "sbpp"
+  discord = "4Bhj6NU"
+  twitter = "RumbleFrog_"
   email = "rumblefrog@protonmail.com"
 
 [Params.seo.webmaster_verifications]
@@ -28,3 +29,8 @@ googleAnalytics = "UA-68577666-5"
     name = "FAQ"
     weight = -100
     url = "/faq/"
+[[menu.main]]
+    name = "Discord"
+    pre = "<i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i>"
+    weight = -99
+    url = "https://discord.gg/4Bhj6NU"
