@@ -30,15 +30,6 @@ Some hosters might disallow plugins to move files. Make sure the basebans.smx is
 
 Add `host_players_show 2` to your `server.cfg` or any startup config file
 
-### <span class="label success outline">Web/Plugin</span> I wish to translate Sourcebans++ for my community
-
-#### Web Panel
-
-1. Copy the theme you wish to translate into a new folder within themes
-2. Modify all files ending in `.tpl` with the new translation, editing only the content, not the structure
-3. Modify `theme.conf.php` while following theme license outline
-4. Enable the theme in web panel setting when you are done
-
 #### Plugin
 
 1. Navigate to <mark>addons/sourcemod/translations</mark>

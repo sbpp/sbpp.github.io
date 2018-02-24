@@ -10,11 +10,9 @@ toc = true
 
 ### Web Panel
 
-1. Navigate to the root directory of your SourceBans++ installation
-2. Navigate to the `themes` folder
-3. Make a copy of the `default` theme, rename it to a name of your choosing
-4. Navigate to the newly made theme folder
-5. Modify `theme.conf.php` to reflect the configuration and save
+1. Navigate to the root directory of your SourceBans++ installation's `themes` folder
+2. Make a copy of the `default` theme, rename it to a name of your choosing and navigate to it
+3. Modify `theme.conf.php` to reflect the configuration and save
 
         <?php
         // Set the name of this theme here
@@ -33,5 +31,13 @@ toc = true
         // Must be:  250px wide  X 170px High
         define('theme_screenshot', "screenshot.jpg");
         ?>
-6. Modify <mark>each</mark> file ending `.tpl` file
-7. Modify the content of the file, leaving HTML tags intact
+4. Modify <mark>each</mark> file ending `.tpl` file
+5. Modify the body content of the file
+
+### Plugin
+
+1. Navigate to SourceMod's `translations` directory
+2. The files you will need to modify are <samp>sourcebans.phrases.txt</samp>, <samp>sourcecomms.phrases.txt</samp>, and <samp>sourcesleuth.phrases.txt</samp>
+3. Within `Phrases` key section, for each sub key sections, append a key value pair, with the two letter language code being the key and the value being the translation (If `#format` kv pair is present, be sure to follow it)
+
+For more information regarding SourceMod translation, view SourceMod's [Translation](https://wiki.alliedmods.net/Translations_(SourceMod_Scripting)) article
