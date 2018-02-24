@@ -5,6 +5,7 @@ theme = "kube"
 description = "Global admin, ban, and communication management system for the Source engine"
 Paginate = 4
 googleAnalytics = "UA-68577666-5"
+enableGitInfo = true
 
 [Params]
   RSSLink = "/index.xml"
