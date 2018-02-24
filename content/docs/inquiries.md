@@ -18,12 +18,6 @@ Some hosters might disallow plugins to move files. Make sure the basebans.smx is
 
 Add `host_players_show 2` to your `server.cfg` or any startup config file
 
-#### Plugin
-
-1. Navigate to <mark>addons/sourcemod/translations</mark>
-2. The files you need to modify are `sourcebans.phrases.txt`, `sourcecomms.phrases.txt`, and `sourcesleuth.phrases.txt`
-3. Following [SourceMod's Translation Guide](https://wiki.alliedmods.net/Translations_(SourceMod_Scripting)), modify the files accordingly
-
 ### <span class="label success outline">Web</span> Why is Sourcebans++ not sending email reports to me (the owner)?
 
 This is because, by default, the owner account is not assigned to any permission group.
