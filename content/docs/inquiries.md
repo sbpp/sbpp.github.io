@@ -8,18 +8,6 @@ bref = "Common inquiries that we have compiled"
 toc = true
 +++
 
-### <span class="label success outline">Web</span> Which ports does the SourceBans Web-Panel require to be open?
-
-If your web panel shows `Error Connecting` for your game server when it is actually online,
-ask your web host to open <mark>UDP incoming</mark> from your game server port (usually `27015`).
-
-If either the **RCON console**, **Admin Rehashing** or **Kick-It** does not work on your web panel,
-ask your web host to open <mark>TCP outgoing</mark> to your game server port (usually `27015`).
-
-Use sb_debug_connection.php, a small testing script to get more detailed debugging information. Open the php file and add your gameserver's ip and port as described in the comments.
-
-You should always check beforehand, if your gameserver banned your webserver's ip with `listip` in rcon. Remove it from the `banned_ip.cfg` and `removeip IP` via rcon.
-
 ### <span class="label success outline">Plugin</span> Ban player option is missing in SourceMod's admin menu!</h3>
 
 Most likely SourceMod's basebans.smx was still loaded when you installed SourceBans' game plugin. The game plugin automatically disables basebans.smx, but your server needs to be restarted for the "Ban player" option to come available.
