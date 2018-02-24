@@ -43,14 +43,3 @@ To show the error message that PHP has produced, you will need to navigate to yo
 ### <span class="label success outline">Plugin</span> Why does the game plugin error log tell me "Database failure: Could not find database conf "sourcebans"?
 
 You forgot to add the "sourcebans" section to SourceMod's databases.cfg, as instructed in the [quickstart](/docs/quickstart).
-
-### <span class="label success outline">Web/Plugin</span> I get the following error: Database failure: [1044/1045/1130/2002/2003]
-
-If the error message reads "Can't connect to local MySQL server through socket", you need to find the "sourcebans" section in databases.cfg and change the value of "host" from "localhost" to the path of your mysql.sock file. If you don't know where mysql.sock is located, ask your gameserver host.
-
-
-Otherwise, most likely your MySQL server does not allow incoming connections from your gameserver. To fix this, you can do either of the following:
-
-- Go into your webserver's control panel and check if there's a section called MySQL Access Hosts, Remote MySQL or something named similar. There you can add the IP address mentioned in the error. This is usually the IP of your gameserver, but it can also be slightly different, so make sure you copy and paste it exactly from the error.
-- The other option is to run the following query on your SourceBans database (for example using phpMyAdmin): `GRANT ALL ON database.* TO 'username'@'ip';`
-You will have to replace "database" with your SourceBans database name, and "username" and "ip" with those mentioned in the error.
