@@ -24,17 +24,6 @@ Add `host_players_show 2` to your `server.cfg` or any startup config file
 2. The files you need to modify are `sourcebans.phrases.txt`, `sourcecomms.phrases.txt`, and `sourcesleuth.phrases.txt`
 3. Following [SourceMod's Translation Guide](https://wiki.alliedmods.net/Translations_(SourceMod_Scripting)), modify the files accordingly
 
-### <span class="label success outline">Web</span> My Banlist doesn't show up, but all other pages do. What can I do?
-
-Your PHP configuration restricts SourceBans to a certain amount of memory.
-When viewing the Banlist it tries to lookup the according country for the IP. This is done by loading a ~7MB database file into the memory.
-
-There are several ways to solve this.
-
-- Remove the `//` in front of this line in your `config.php`: `define('SB_MEM', '128M');`
-- Ask your webhost to increase the PHP `memory_limit` setting.
-- If it still doesn't show up, check the box for <mark>No Country Research</mark> in your webpanel settings page.
-
 ### <span class="label success outline">Web</span> Why is Sourcebans++ not sending email reports to me (the owner)?
 
 This is because, by default, the owner account is not assigned to any permission group.
