@@ -65,16 +65,3 @@ Otherwise, most likely your MySQL server does not allow incoming connections fro
 - Go into your webserver's control panel and check if there's a section called MySQL Access Hosts, Remote MySQL or something named similar. There you can add the IP address mentioned in the error. This is usually the IP of your gameserver, but it can also be slightly different, so make sure you copy and paste it exactly from the error.
 - The other option is to run the following query on your SourceBans database (for example using phpMyAdmin): `GRANT ALL ON database.* TO 'username'@'ip';`
 You will have to replace "database" with your SourceBans database name, and "username" and "ip" with those mentioned in the error.
-
-### <span class="label success outline">Plugin</span> I'm getting: Could not find driver "mysql"
-
-- Please make sure `dbi.mysql.ext.so` (`dbi.mysql.ext.dll` on Windows) extension exists and check if it is loaded via <mark>sm exts list</mark>
-- Make sure the extension is executable via `chmod u+x dbi.mysql.ext.so`
-- Install `zlib` (**Requires SSH Access**)
-  - 32-Bit Debian/Ubuntu: `apt-get install zlib1g`
-  - 64-Bit Debian/Ubuntu: `apt-get install lib32z1`
-  - 32/64-Bit Fedora: `yum install zlib.i686`
-  - 32/64-Bit Mandriva: `urpmi zlib1`
-  - 32-Bit SUSE: `zypper install libz1`
-  - 64-Bit SUSE: `zypper install libz1-32bit`
-- If all of the above does not work, use `ldd -d -r dbi.mysql.ext.so` to look for missing dependencies, and use Google to look them up
