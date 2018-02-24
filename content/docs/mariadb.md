@@ -29,11 +29,11 @@ Run `mysql_secure_installation`
 
 1. Navigate to your MariaDB config (Ex: <samp>/etc/mysql/mariadb.conf.d/50-server.cnf</samp>)
 2. Comment out `bind-address` by prefixing it with a `#`, so it looks like `#bind-address = 127.0.0.1`
-3. Restart MySQL via `sudo service mysql restart`
+3. Restart MySQL via `sudo systemctl restart mysql`
 
 ### Granting Permission
 
-Sign in to MySQL shell via `mysql -u root -p` and enter your password
+Sign in to MySQL shell via `sudo mysql -u root -p` and enter your password
 
 Run the following, adjusting it to suit your own needs
 
