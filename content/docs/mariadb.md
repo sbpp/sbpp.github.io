@@ -4,7 +4,7 @@ description = "Setting up a MariaDB server on Ubuntu 16.04 LTS"
 date = 2018-02-18T20:30:47-05:00
 weight = 23
 draft = false
-bref = "This guide will walk you through on setting up a MariaDB server on Ubuntu"
+bref = "This guide will walk you through on setting up a MariaDB server on Ubuntu 16.04 LTS"
 toc = true
 +++
 
