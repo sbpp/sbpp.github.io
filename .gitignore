@@ -46,6 +46,9 @@ Temporary Items
 # Netbeans
 /nbproject/
 
+# Dependencies
+node_modules
+
 # Hugo
 public
 dev
