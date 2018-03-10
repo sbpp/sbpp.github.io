@@ -9,7 +9,7 @@ addons:
 
 #Set the build environment
 env:
-  - HUGOV=0.36.1
+  - HUGOV=0.37.1
 
 #Clean and don't fail
 install:
@@ -43,3 +43,5 @@ deploy:
   target-branch: master
   on:
     branch: src
+  edge:
+    branch: pages-ivar-set
