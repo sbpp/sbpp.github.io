@@ -42,5 +42,5 @@ Once complete, navigate to the file in your browser, and if done properly it wil
 ### TCP Error
 
 - Make sure your host is not blocking <samp>TCP Outgoing</samp>
-- If your server is not explicitly IP binded, do so using `-ip` launch parameter
+- If your server is explicitly IP binded, do so using `-ip` launch parameter
 - If you are unable to use RCON through in-game console, append `-usercon` to launch parameter
