@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intro on SourceBans&#43;&#43;</title>
+    <link>/tags/intro/</link>
+    <description>Recent content in Intro on SourceBans&#43;&#43;</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 17 Feb 2018 23:31:41 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/intro/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New Site</title>
+      <link>/blog/intro/</link>
+      <pubDate>Sat, 17 Feb 2018 23:31:41 -0500</pubDate>
+      
+      <guid>/blog/intro/</guid>
+      <description>New Site Welcome to the new SourceBans++ site, this site is meant to serve as a replacement to the old one, featuring a brand new documentation, and FAQ pages</description>
+    </item>
+    
+  </channel>
+</rss>
