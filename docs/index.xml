@@ -88,7 +88,7 @@ Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-s
       <pubDate>Fri, 23 Feb 2018 21:56:16 -0500</pubDate>
       
       <guid>/docs/could_not_find_driver/</guid>
-      <description>Debugging  Please make sure dbi.mysql.ext.so (dbi.mysql.ext.dll on Windows) extension exists and check if it is loaded via sm exts list Make sure the extension is executable via chmod u+x dbi.mysql.ext.so Install zlib (Requires SSH Access)  32-Bit Debian/Ubuntu: apt-get install zlib1g 64-Bit Debian/Ubuntu: apt-get install lib32z1 32&amp;frasl;64-Bit Fedora: yum install zlib.i686 32&amp;frasl;64-Bit Mandriva: urpmi zlib1 32-Bit SUSE: zypper install libz1 64-Bit SUSE: zypper install libz1-32bit  If all of the above does not work, use ldd -d -r dbi.</description>
+      <description>Web  Ensure you have installed the mysql extension of your PHP version (Ex: php7.2-mysql) Ensure pdo_mysql module is loaded, check phpinfo() for this  Plugin  Please make sure dbi.mysql.ext.so (dbi.mysql.ext.dll on Windows) extension exists and check if it is loaded via sm exts list Make sure the extension is executable via chmod u+x dbi.mysql.ext.so Install zlib (Requires SSH Access)  32-Bit Debian/Ubuntu: apt-get install zlib1g 64-Bit Debian/Ubuntu: apt-get install lib32z1 32&amp;frasl;64-Bit Fedora: yum install zlib.</description>
     </item>
     
     <item>
