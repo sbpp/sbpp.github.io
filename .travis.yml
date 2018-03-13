@@ -43,5 +43,3 @@ deploy:
   target-branch: master
   on:
     branch: src
-  edge:
-    branch: pages-ivar-set
