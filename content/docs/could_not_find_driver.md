@@ -8,7 +8,12 @@ bref = "Could not find driver \"MySQL\""
 toc = true
 +++
 
-### Debugging
+### Web
+
+- Ensure you have installed the mysql extension of your PHP version (Ex: <samp>php7.2-mysql</samp>)
+- Ensure `pdo_mysql` module is loaded, check `phpinfo()` for this
+
+### Plugin
 
 - Please make sure `dbi.mysql.ext.so` (`dbi.mysql.ext.dll` on Windows) extension exists and check if it is loaded via <mark>sm exts list</mark>
 - Make sure the extension is executable via `chmod u+x dbi.mysql.ext.so`
