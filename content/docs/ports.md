@@ -10,9 +10,10 @@ toc = true
 
 ### Web Panel
 
-- <samp>UDP</samp> Incoming on game server port
-- <samp>TCP</samp> Outgoing on game server port
+* <samp>UDP</samp> Incoming on game server port
+
+* <samp>TCP</samp> Outgoing on game server port
 
 ### Game
 
-- Server Port ( <samp>UDP & TCP</samp> )
+* Server Port ( <samp>UDP & TCP</samp> )

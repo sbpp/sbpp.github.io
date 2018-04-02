@@ -10,10 +10,13 @@ toc = true
 
 ### Check list
 
-- Your host is not blocking any traffic on your game server port (UDP Incoming & TCP Outgoing)
-- Your game server is online to people outside of your network w/o any error on binding
-- You can connect to server in-game
-- You can use RCON through in-game console, if not view [TCP Error](#tcp-error) below
+* Your host is not blocking any traffic on your game server port (UDP Incoming & TCP Outgoing)
+
+* Your game server is online to people outside of your network w/o any error on binding
+
+* You can connect to server in-game
+
+* You can use RCON through in-game console, if not view [TCP Error](#tcp-error) below
 
 ### Using the debug tool
 
@@ -35,12 +38,16 @@ Once complete, navigate to the file in your browser, and if done properly it wil
 
 ### UDP Error
 
-- Make sure your host is not blocking <samp>UDP Incoming</samp>
-- If hosting locally, make sure you are port forwarding correctly
-- Make sure your game server did not ban your web server's IP using `listip`, if banned: remove it from `cfg/banned_ip.cfg` and using `removeip IP` via RCON
+* Make sure your host is not blocking <samp>UDP Incoming</samp>
+
+* If hosting locally, make sure you are port forwarding correctly
+
+* Make sure your game server did not ban your web server's IP using `listip`, if banned: remove it from `cfg/banned_ip.cfg` and using `removeip IP` via RCON
 
 ### TCP Error
 
-- Make sure your host is not blocking <samp>TCP Outgoing</samp>
-- Make sure your server is explicitly IP binded, do so using `-ip` launch parameter
-- If you are unable to use RCON through in-game console, append `-usercon` to launch parameter
+* Make sure your host is not blocking <samp>TCP Outgoing</samp>
+
+* Make sure your server is explicitly IP binded, do so using `-ip` launch parameter
+
+* If you are unable to use RCON through in-game console, append `-usercon` to launch parameter
