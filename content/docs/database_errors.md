@@ -10,7 +10,7 @@ toc = true
 
 ### Access Denied
 
-- If not self-hosted, please make sure your host allows remote connections
+* If not self-hosted, please make sure your host allows remote connections
 
 This problem is often related to user accounts that the server permits
 
@@ -41,7 +41,7 @@ The most common reason for the MySQL server has gone away error is that the serv
 
 Other common reasons:
 
-- If you send a query to the server that is incorrect or too large. If mysqld receives a packet that is too large or out of order, it assumes that something has gone wrong with the client and closes the connection. If you need big queries (for example, if you are working with big BLOB columns), you can increase the query limit by setting the server's max_allowed_packet variable, which has a default value of 4MB. You may also need to increase the maximum packet size on the client end.
+* If you send a query to the server that is incorrect or too large. If mysqld receives a packet that is too large or out of order, it assumes that something has gone wrong with the client and closes the connection. If you need big queries (for example, if you are working with big BLOB columns), you can increase the query limit by setting the server's max_allowed_packet variable, which has a default value of 4MB. You may also need to increase the maximum packet size on the client end.
 
 ### Too many connections
 

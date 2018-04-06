@@ -10,6 +10,8 @@ toc = true
 
 ### Removal
 
-1. Navigate to <mark>Admin Panel</mark> -> <mark>Webpanel Settings</mark>
-2. Edit the <mark>Intro Text</mark>
-3. <mark>Save Changes</mark> and you are done
+1.  Navigate to <mark>Admin Panel</mark> -> <mark>Webpanel Settings</mark>
+
+2.  Edit the <mark>Intro Text</mark>
+
+3.  <mark>Save Changes</mark> and you are done

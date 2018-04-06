@@ -16,20 +16,24 @@ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F2
 sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.2/ubuntu xenial main'
 sudo apt-get update
 ```
+
 ### Installing
 
 ```
 sudo apt-get install mariadb-server
 ```
+
 ### Setup
 
 Run `mysql_secure_installation`
 
 ### Configuring
 
-1. Navigate to your MariaDB config (Ex: <samp>/etc/mysql/mariadb.conf.d/50-server.cnf</samp>)
-2. Comment out `bind-address` by prefixing it with a `#`, so it looks like `#bind-address = 127.0.0.1`
-3. Restart MySQL via `sudo systemctl restart mysql`
+1.  Navigate to your MariaDB config (Ex: <samp>/etc/mysql/mariadb.conf.d/50-server.cnf</samp>)
+
+2.  Comment out `bind-address` by prefixing it with a `#`, so it looks like `#bind-address = 127.0.0.1`
+
+3.  Restart MySQL via `sudo systemctl restart mysql`
 
 ### Granting Permission
 
@@ -37,9 +41,11 @@ Sign in to MySQL shell via `sudo mysql -u root -p` and enter your password
 
 Run the following, adjusting it to suit your own needs
 
-- <mark>Username</mark> - The user you wish to create
-- <mark>Host</mark> - The host you wish to whitelist
-- <mark>Password</mark> - The password to use for the user creation
+* <mark>Username</mark> - The user you wish to create
+
+* <mark>Host</mark> - The host you wish to whitelist
+
+* <mark>Password</mark> - The password to use for the user creation
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'HOST' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
