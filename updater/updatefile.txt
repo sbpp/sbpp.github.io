@@ -4,7 +4,7 @@
 	{
 		"Version"
 		{
-			"Latest"	"1.6.2"
+			"Latest"	"1.6.3"
 		}
 		
 		"Notes"	"More info @ https://sbpp.github.io"
@@ -28,7 +28,7 @@
 		"Source"	"Path_SM/scripting/sbpp_comms.sp"
 		"Source"	"Path_SM/scripting/sbpp_sleuth.sp"
 		"Source"	"Path_SM/scripting/sbpp_checker.sp"
-		"Source"	"Path_SM/scripting/include/sourcebans.inc"
+		"Source"	"Path_SM/scripting/include/sourcebanspp.inc"
 		"Source"	"Path_SM/scripting/include/sourcecomms.inc"
 	}
 }
