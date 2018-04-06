@@ -6,10 +6,22 @@
     <description>Recent content in Blogs on SourceBans&#43;&#43;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Feb 2018 23:31:41 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 14 Mar 2018 10:08:41 -0400</lastBuildDate>
     
 	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1.6.3 Release 🔖</title>
+      <link>/blog/1.6.3_release/</link>
+      <pubDate>Wed, 14 Mar 2018 10:08:41 -0400</pubDate>
+      
+      <guid>/blog/1.6.3_release/</guid>
+      <description>What&amp;rsquo;s new ✨  Plugins
+ + Discord: Listens for SBPP_OnBanPlayer() and the new SBPP_OnReportPlayer() natives and forwards it to the designated Discord webhook with PR #420
+ + Report: Uses the new SBPP_ReportPlayer() to insert reports into the submissions table, reachable via Admin Panel -&amp;gt; Bans -&amp;gt; Ban submissions with PR #408 closing #407
+ Main: Now whenever a banned client joins, it will mend the IP column with the corresponding value if the column is previously empty with PR #406 closing issue #187</description>
+    </item>
     
     <item>
       <title>New Site</title>

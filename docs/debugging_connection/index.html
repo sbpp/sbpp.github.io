@@ -30,7 +30,7 @@
 
 <meta property="article:published_time" content="2018-02-21T20:04:40-05:00"/>
 
-<meta property="article:modified_time" content="2018-03-10T14:12:06-05:00"/>
+<meta property="article:modified_time" content="2018-04-02T18:06:26-04:00"/>
 
 
 
@@ -105,6 +105,10 @@ ga('send', 'pageview');
        
        
     <li>
+      <a href="/blog/" > Blog</a>
+    </li>
+    
+    <li>
       <a href="/docs/" > Docs</a>
     </li>
     
@@ -162,10 +166,13 @@ headingSelector: 'h3'
 <h3 id="check-list">Check list</h3>
 
 <ul>
-<li>Your host is not blocking any traffic on your game server port (UDP Incoming &amp; TCP Outgoing)</li>
-<li>Your game server is online to people outside of your network w/o any error on binding</li>
-<li>You can connect to server in-game</li>
-<li>You can use RCON through in-game console, if not view <a href="#tcp-error">TCP Error</a> below</li>
+<li><p>Your host is not blocking any traffic on your game server port (UDP Incoming &amp; TCP Outgoing)</p></li>
+
+<li><p>Your game server is online to people outside of your network w/o any error on binding</p></li>
+
+<li><p>You can connect to server in-game</p></li>
+
+<li><p>You can use RCON through in-game console, if not view <a href="#tcp-error">TCP Error</a> below</p></li>
 </ul>
 
 <h3 id="using-the-debug-tool">Using the debug tool</h3>
@@ -188,17 +195,21 @@ $serverrcon = &quot;&quot;; // You only need to specify this, if you want to tes
 <h3 id="udp-error">UDP Error</h3>
 
 <ul>
-<li>Make sure your host is not blocking <samp>UDP Incoming</samp></li>
-<li>If hosting locally, make sure you are port forwarding correctly</li>
-<li>Make sure your game server did not ban your web server&rsquo;s IP using <code>listip</code>, if banned: remove it from <code>cfg/banned_ip.cfg</code> and using <code>removeip IP</code> via RCON</li>
+<li><p>Make sure your host is not blocking <samp>UDP Incoming</samp></p></li>
+
+<li><p>If hosting locally, make sure you are port forwarding correctly</p></li>
+
+<li><p>Make sure your game server did not ban your web server&rsquo;s IP using <code>listip</code>, if banned: remove it from <code>cfg/banned_ip.cfg</code> and using <code>removeip IP</code> via RCON</p></li>
 </ul>
 
 <h3 id="tcp-error">TCP Error</h3>
 
 <ul>
-<li>Make sure your host is not blocking <samp>TCP Outgoing</samp></li>
-<li>Make sure your server is explicitly IP binded, do so using <code>-ip</code> launch parameter</li>
-<li>If you are unable to use RCON through in-game console, append <code>-usercon</code> to launch parameter</li>
+<li><p>Make sure your host is not blocking <samp>TCP Outgoing</samp></p></li>
+
+<li><p>Make sure your server is explicitly IP binded, do so using <code>-ip</code> launch parameter</p></li>
+
+<li><p>If you are unable to use RCON through in-game console, append <code>-usercon</code> to launch parameter</p></li>
 </ul>
 
 

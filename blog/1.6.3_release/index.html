@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta name="generator" content="Hugo 0.37.1" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> 1.6.3 Release 🔖 </title>
+
+  
+  <meta name="description" content="Changes within 1.6.3 release"> 
+  
+  
+  
+  
+  
+
+  
+
+  <meta name="author" content="SourceBans&#43;&#43;">
+
+
+  <meta property="og:title" content="1.6.3 Release 🔖" />
+<meta property="og:description" content="Changes within 1.6.3 release" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/blog/1.6.3_release/" />
+
+
+
+<meta property="article:published_time" content="2018-03-14T10:08:41-04:00"/>
+
+<meta property="article:modified_time" content="2018-04-06T12:41:10-04:00"/>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-68577666-5', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+  
+
+  <link rel="canonical" href="/blog/1.6.3_release/">  
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="/img/favicons/site.webmanifest">
+<link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#1076de">
+
+
+  <link href="/css/font.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.min.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.legenda.css" rel="stylesheet" type="text/css">
+  <link href="/css/highlight.css" rel="stylesheet" type="text/css">
+  <link href="/css/master.css" rel="stylesheet" type="text/css">
+  <link href="/css/kube.demo.css" rel="stylesheet" type="text/css">
+  <link href="/css/custom.css" rel="stylesheet" type="text/css">
+
+  <script src="/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+  <script defer src="/js/fontawesome-all.min.js" type="text/javascript"></script>
+
+  <script type="text/javascript" src="/js/tocbot.min.js"></script>
+</head>
+
+
+<body class="page-kube">
+  <header> <div class="show-sm">
+    <div id="nav-toggle-box">
+      <div id="nav-toggle-brand">
+        <a href="/">SourceBans&#43;&#43;</a>
+      </div><a data-component="toggleme" data-target="#top" href="#" id="nav-toggle"><i class="kube-menu"></i></a>
+    </div>
+  </div>
+  <div class="hide-sm" id="top">
+    <div id="top-brand">
+      <a href="/" title="home">SourceBans&#43;&#43;</a>
+    </div>
+    <nav id="top-nav-main">
+      <ul>
+       
+       
+    <li>
+      <a href="/blog/" > Blog</a>
+    </li>
+    
+    <li>
+      <a href="/docs/" > Docs</a>
+    </li>
+    
+    <li>
+      <a href="/faq/" > FAQ</a>
+    </li>
+    
+    <li>
+      <a href="https://discord.gg/4Bhj6NU" ><i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i> Discord</a>
+    </li>
+    
+      </ul>
+    </nav>
+    <nav id="top-nav-extra">
+      <ul>
+        
+      </ul>
+    </nav>
+  </div>
+ </header>
+  <main>
+<div class="push-center" itemscope itemtype="http://schema.org/BlogPosting">
+    
+<meta itemprop="name" content="1.6.3 Release 🔖">
+<meta itemprop="description" content="Changes within 1.6.3 release">
+
+
+<meta itemprop="datePublished" content="2018-03-14T10:08:41-04:00" />
+<meta itemprop="dateModified" content="2018-03-14T10:08:41-04:00" />
+<meta itemprop="wordCount" content="351">
+
+
+
+<meta itemprop="keywords" content="" />
+
+<div id="hero">
+    <h1 itemprop="headline">  1.6.3 Release 🔖</h1>
+    
+<blockquote itemprop="description">Changes within 1.6.3 release</blockquote>
+
+<time class="post-time"><span class="icon">
+  <i class="far fa-clock" aria-hidden="true"></i>
+</span>
+<span>2 minute read</span>
+<span class="icon">
+ <i class="fas fa-pencil-alt" aria-hidden="true"></i>
+</span>
+
+  Modified: <time datetime="2018-04-06T12:41:10-04:00">6 Apr, 2018</time>
+
+</time>
+</div>
+<div id="post-box">
+<div id="post" itemprop="articleBody">
+
+    
+
+<h3 id="what-s-new">What&rsquo;s new ✨</h3>
+
+<ul>
+<li><p>Plugins</p>
+
+<ul>
+<li><p><span class="label success">+</span> Discord: Listens for <code>SBPP_OnBanPlayer()</code> and the new <a href="https://github.com/sbpp/sourcebans-pp/blob/dbb8aeb0e3a7f204b24bf99766cf5e99ff13e86b/game/addons/sourcemod/scripting/include/sourcebanspp.inc#L104"><samp>SBPP_OnReportPlayer()</samp></a> natives and forwards it to the designated Discord webhook with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/420">#420</a></p></li>
+
+<li><p><span class="label success">+</span> Report: Uses the new <a href="https://github.com/sbpp/sourcebans-pp/blob/dbb8aeb0e3a7f204b24bf99766cf5e99ff13e86b/game/addons/sourcemod/scripting/include/sourcebanspp.inc#L84"><samp>SBPP_ReportPlayer()</samp></a> to insert reports into the <code>submissions</code> table, reachable via <code>Admin Panel -&gt; Bans -&gt; Ban submissions</code> with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/408">#408</a> closing <a href="https://github.com/sbpp/sourcebans-pp/issues/407">#407</a></p></li>
+
+<li><p>Main: Now whenever a banned client joins, it will mend the <code>IP</code> column with the corresponding value if the column is previously empty with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/406">#406</a> closing issue <a href="https://github.com/sbpp/sourcebans-pp/issues/187">#187</a></p></li>
+
+<li><p>Checker: Now supports communication ban lookup &amp; verbose for communication bans upon connect with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/398">#398</a> closing <a href="https://github.com/sbpp/sourcebans-pp/issues/188">#188</a></p></li>
+
+<li><p>Sleuth: Added <code>sm_sleuth_excludeold</code> and <code>sm_sleuth_excludetime</code> convars to allow the exclusion of old permanent ban entries with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/356">#356</a> closing <a href="https://github.com/sbpp/sourcebans-pp/issues/352">#352</a></p></li>
+</ul></li>
+</ul>
+
+<h3 id="breaking-changes">Breaking Changes 💥</h3>
+
+<ul>
+<li>Native Namespace Change: For SourceBans++ to not clash with the original SourceBans, we needed to change the include file from <code>sourcebans.inc</code> to <code>sourcebanspp.inc</code> and change all the calls &amp; forwards to be prefixed with <code>SBPP</code> with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/415">#415</a> closing <a href="https://github.com/sbpp/sourcebans-pp/issues/414">#414</a></li>
+</ul>
+
+<h3 id="changes">Changes 🎨</h3>
+
+<ul>
+<li>Available ban time length has been moved to <code>sourcebans.cfg</code> config file instead of being hard coded with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/349">#349</a></li>
+</ul>
+
+<h3 id="performance">Performance ⚡️</h3>
+
+<ul>
+<li>CServerInfo has been replaced with xPaw&rsquo;s <a href="https://github.com/xPaw/PHP-Source-Query">SourceQuery</a> library for a better querying performance with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/360">#360</a></li>
+</ul>
+
+<h3 id="bug-fixes">Bug Fixes 🐛</h3>
+
+<ul>
+<li><p>Steam community OpenID HTTPS protocol <a href="https://github.com/sbpp/sourcebans-pp/commit/0d9ef4b5f7aebc72d5727d290db5f1d104ba66aa">0d9ef4b</a></p></li>
+
+<li><p>Users unable to change account password with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/324">#324</a> closing issue <a href="https://github.com/sbpp/sourcebans-pp/issues/323">#323</a></p></li>
+
+<li><p>PHP 7 Smarty deprecation warnings has been addressed with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/387">#387</a> and <a href="https://github.com/sbpp/sourcebans-pp/pull/399">#399</a> closing issue <a href="https://github.com/sbpp/sourcebans-pp/issues/368">#368</a> and <a href="https://github.com/sbpp/sourcebans-pp/issues/382">#382</a></p></li>
+
+<li><p>Session mutes/gags not being reapplied when a client disconnect with PR <a href="https://github.com/sbpp/sourcebans-pp/issues/384">#384</a> closing issue <a href="https://github.com/sbpp/sourcebans-pp/issues/309">#309</a></p></li>
+
+<li><p>Improper timezone calculation &amp; mess with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/363">#363</a> closing issue <a href="https://github.com/sbpp/sourcebans-pp/issues/362">#362</a></p></li>
+
+<li><p>Ban reason being double encoded with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/342">#342</a> closing issue <a href="https://github.com/sbpp/sourcebans-pp/issues/341">#341</a></p></li>
+
+<li><p>Admin and target being invalid inside SourceComms forward with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/338">#338</a> and <a href="https://github.com/sbpp/sourcebans-pp/pull/330">#330</a></p></li>
+
+<li><p>HackingReason menu not cleaned when config reads from scratch with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/349">#349</a></p></li>
+
+<li><p>Group ban capping to 1000 members (Steam pagination) with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/337">#337</a> addressing <a href="https://github.com/sbpp/sourcebans-pp/issues/299">#299</a></p></li>
+
+<li><p>Server list hostname display with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/364">#364</a></p></li>
+
+<li><p>Bans and comms page ajax call with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/365">#365</a></p></li>
+
+<li><p><code>Client X is not in game</code> has been addressed with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/392">#392</a></p></li>
+
+<li><p>Marked <code>SBPP_BanPlayer()</code> as optional native with PR <a href="https://github.com/sbpp/sourcebans-pp/pull/388">#388</a></p></li>
+</ul>
+
+
+</div>
+
+    <div>
+        <p>
+  Published
+  
+    
+      by <span itemprop="author">SourceBans&#43;&#43;</span>
+    
+  
+  <time datetime="2018-03-14T10:08:41-04:00">
+    14 Mar, 2018
+  </time>
+  
+  
+  using <span itemprop="wordCount">351</span> words.
+</p>
+
+        
+
+
+
+    </div>
+
+    
+
+</div>
+</div>
+</main>
+  <footer>   <footer id="footer">
+    <nav>
+      <ul>
+        <li>
+          <a href="/blog/">Blog</a>
+        </li>
+        <li>
+          <a href="/docs/">Docs</a>
+        </li>
+        <li>
+          <a href="/faq/">FAQ</a>
+        </li>
+        <li>
+          <a href="https://github.com/sbpp"><i class="fab fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://discord.gg/4Bhj6NU"><i class="fab fa-discord"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <p>&copy; Licence MIT.</p>
+  </footer>
+ </footer>
+
+
+  <script src="/js/kube.js" type="text/javascript">
+  </script>
+  <script src="/js/kube.legenda.js" type="text/javascript">
+  </script>
+  <script src="/js/master.js" type="text/javascript">
+  </script>
+</body>
+
+</html>

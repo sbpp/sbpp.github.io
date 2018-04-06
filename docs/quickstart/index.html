@@ -30,7 +30,7 @@
 
 <meta property="article:published_time" content="2018-02-17T20:47:15-05:00"/>
 
-<meta property="article:modified_time" content="2018-02-22T12:08:26-05:00"/>
+<meta property="article:modified_time" content="2018-04-02T18:06:26-04:00"/>
 
 
 
@@ -105,6 +105,10 @@ ga('send', 'pageview');
        
        
     <li>
+      <a href="/blog/" > Blog</a>
+    </li>
+    
+    <li>
       <a href="/docs/" > Docs</a>
     </li>
     
@@ -164,18 +168,20 @@ headingSelector: 'h3'
 <p>Before we get started, let&rsquo;s make sure you meet these following requirements:</p>
 
 <ul>
-<li>Web
+<li><p>Web</p>
 
 <ul>
-<li>A working MySQL/<a href="/docs/mariadb">MariaDB</a> database</li>
-<li>PHP Version &gt;= 5.6</li>
+<li><p>A working MySQL/<a href="/docs/mariadb">MariaDB</a> database</p></li>
+
+<li><p>PHP Version &gt;= 5.6</p></li>
 </ul></li>
-<li>Game
+
+<li><p>Game</p>
 
 <ul>
-<li>Sourcemod &gt;= 1.7</li>
-<li>Metamod: Source
-<br /></li>
+<li><p>Sourcemod &gt;= 1.7</p></li>
+
+<li><p>Metamod: Source</p></li>
 </ul></li>
 </ul>
 
@@ -184,19 +190,25 @@ headingSelector: 'h3'
 <h3 id="uploading">Uploading</h3>
 
 <ul>
-<li>Download the latest release from the <a href="https://github.com/sbpp/sourcebans-pp/releases" target="_blank_">release</a> page</li>
-<li>Upload everything that&rsquo;s within <code>web</code> folder to either the root of your web server or a folder that you wish to allocate</li>
-<li>Upload everything that&rsquo;s within <code>game</code> to the game mod directory (<code>tf</code>, <code>cs</code>, <code>dod</code>, etc)</li>
+<li><p>Download the latest release from the <a href="https://github.com/sbpp/sourcebans-pp/releases" target="_blank_">release</a> page</p></li>
+
+<li><p>Upload everything that&rsquo;s within <code>web</code> folder to either the root of your web server or a folder that you wish to allocate</p></li>
+
+<li><p>Upload everything that&rsquo;s within <code>game</code> to the game mod directory (<code>tf</code>, <code>cs</code>, <code>dod</code>, etc)</p></li>
 </ul>
 
 <h3 id="write-permission">Write Permission</h3>
 
 <ul>
-<li><code>config.php</code> file is writable (Linux: <code>sudo chmod 644 config.php</code>)</li>
-<li><code>/demos</code> folder is writable (Linux: <code>sudo chmod -R 644 demos</code>)</li>
-<li><code>/themes_c</code> folder is writable (Linux: <code>sudo chmod -R 644 themes_c</code>)</li>
-<li><code>/images/games</code> folder is writable (Linux: <code>sudo chmod -R 644 /images/games</code>)</li>
-<li><code>/images/maps</code> folder is writable (Linux: <code>sudo chmod -R 644 /images/maps</code>)</li>
+<li><p><code>config.php</code> file is writable (Linux: <code>sudo chmod 644 config.php</code>)</p></li>
+
+<li><p><code>/demos</code> folder is writable (Linux: <code>sudo chmod -R 644 demos</code>)</p></li>
+
+<li><p><code>/themes_c</code> folder is writable (Linux: <code>sudo chmod -R 644 themes_c</code>)</p></li>
+
+<li><p><code>/images/games</code> folder is writable (Linux: <code>sudo chmod -R 644 /images/games</code>)</p></li>
+
+<li><p><code>/images/maps</code> folder is writable (Linux: <code>sudo chmod -R 644 /images/maps</code>)</p></li>
 </ul>
 
 <h3 id="web-installation">Web Installation</h3>
@@ -207,23 +219,35 @@ within a directory other than the root directory (Ex: <code>example.com/sb/</cod
 <p>Navigate to your Sourcebans++ installer (<code>example.com/install</code>) to begin installation</p>
 
 <ol>
-<li>Read over the license agreement, check <code>I have read, and accept the license</code> and click <code>Ok</code> when you are done reading</li>
-<li>Fill out the information
+<li><p>Read over the license agreement, check <code>I have read, and accept the license</code> and click <code>Ok</code> when you are done reading</p></li>
+
+<li><p>Fill out the information</p>
 
 <ul>
-<li><mark>Server Hostname</mark> - Database host, use <code>localhost</code> if it&rsquo;s on the same machine, otherwise use the IP or any resolvable records</li>
-<li><mark>Server Port</mark> - Database port, by default it runs on <code>3306</code>, you will need to change it if the port is difference</li>
-<li><mark>Username</mark> - Database username, the user to sign in with</li>
-<li><mark>Password</mark> - Database password, the password for the corresponding user</li>
-<li><mark>Database</mark> - Database to use, you should create a database if have not already</li>
-<li><mark>Table Prefix</mark> - The prefix you want the SourceBans++ tables to use, useful if there are name collisions, otherwise, leave it at default</li>
-<li><mark>Steam API Key</mark> - Your Steam API key, which can be obtained <a href="https://steamcommunity.com/dev/apikey" target="_blank_">here</a></li>
-<li><mark>SourceBans URL</mark> - Your SourceBans site with <samp>protocol</samp> included! (Ex: <code>https://example.com</code>), the <samp>http://</samp> or <samp>https://</samp> is <em>required</em></li>
-<li><mark>SourceBans EMail</mark> - The email address to send password reset and/or ban submissions from, leave empty if you don&rsquo;t have one to use and don&rsquo;t plan to use it</li>
+<li><p><mark>Server Hostname</mark> - Database host, use <code>localhost</code> if it&rsquo;s on the same machine, otherwise use the IP or any resolvable records</p></li>
+
+<li><p><mark>Server Port</mark> - Database port, by default it runs on <code>3306</code>, you will need to change it if the port is difference</p></li>
+
+<li><p><mark>Username</mark> - Database username, the user to sign in with</p></li>
+
+<li><p><mark>Password</mark> - Database password, the password for the corresponding user</p></li>
+
+<li><p><mark>Database</mark> - Database to use, you should create a database if have not already</p></li>
+
+<li><p><mark>Table Prefix</mark> - The prefix you want the SourceBans++ tables to use, useful if there are name collisions, otherwise, leave it at default</p></li>
+
+<li><p><mark>Steam API Key</mark> - Your Steam API key, which can be obtained <a href="https://steamcommunity.com/dev/apikey" target="_blank_">here</a></p></li>
+
+<li><p><mark>SourceBans URL</mark> - Your SourceBans site with <samp>protocol</samp> included! (Ex: <code>https://example.com</code>), the <samp>http://</samp> or <samp>https://</samp> is <em>required</em></p></li>
+
+<li><p><mark>SourceBans EMail</mark> - The email address to send password reset and/or ban submissions from, leave empty if you don&rsquo;t have one to use and don&rsquo;t plan to use it</p></li>
 </ul></li>
-<li>System check, look over everything and make sure everything is green before continuing</li>
-<li>Table creation, click <code>Ok</code> when a success notification pops up</li>
-<li>Fill out the information for your personal account, and hit <code>Ok</code> when done (Note: <mark>Steam ID</mark> is your SteamID2 ID)</li>
+
+<li><p>System check, look over everything and make sure everything is green before continuing</p></li>
+
+<li><p>Table creation, click <code>Ok</code> when a success notification pops up</p></li>
+
+<li><p>Fill out the information for your personal account, and hit <code>Ok</code> when done (Note: <mark>Steam ID</mark> is your SteamID2 ID)</p></li>
 </ol>
 
 <h3 id="plugin-setup">Plugin Setup</h3>

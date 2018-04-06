@@ -6,10 +6,22 @@
     <description>Recent content on SourceBans&#43;&#43;</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Feb 2018 23:31:41 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 14 Mar 2018 10:08:41 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1.6.3 Release 🔖</title>
+      <link>/blog/1.6.3_release/</link>
+      <pubDate>Wed, 14 Mar 2018 10:08:41 -0400</pubDate>
+      
+      <guid>/blog/1.6.3_release/</guid>
+      <description>What&amp;rsquo;s new ✨  Plugins
+ + Discord: Listens for SBPP_OnBanPlayer() and the new SBPP_OnReportPlayer() natives and forwards it to the designated Discord webhook with PR #420
+ + Report: Uses the new SBPP_ReportPlayer() to insert reports into the submissions table, reachable via Admin Panel -&amp;gt; Bans -&amp;gt; Ban submissions with PR #408 closing #407
+ Main: Now whenever a banned client joins, it will mend the IP column with the corresponding value if the column is previously empty with PR #406 closing issue #187</description>
+    </item>
     
     <item>
       <title>New Site</title>
@@ -27,8 +39,15 @@
       
       <guid>/docs/quickstart/</guid>
       <description>Prerequisites Before we get started, let&amp;rsquo;s make sure you meet these following requirements:
- Web  A working MySQL/MariaDB database PHP Version &amp;gt;= 5.6  Game  Sourcemod &amp;gt;= 1.7 Metamod: Source    If you&amp;rsquo;re using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.
-Uploading  Download the latest release from the release page Upload everything that&amp;rsquo;s within web folder to either the root of your web server or a folder that you wish to allocate Upload everything that&amp;rsquo;s within game to the game mod directory (tf, cs, dod, etc)  Write Permission  config.</description>
+ Web
+ A working MySQL/MariaDB database
+ PHP Version &amp;gt;= 5.6
+  Game
+ Sourcemod &amp;gt;= 1.7
+ Metamod: Source
+   If you&amp;rsquo;re using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.
+Uploading  Download the latest release from the release page
+ Upload everything that&amp;rsquo;s within web folder to either the root of your web server or a folder that you wish to allocate</description>
     </item>
     
     <item>
@@ -49,7 +68,24 @@ Web Player list displays &amp;ldquo;Max Players&amp;rdquo; instead of all the pl
       
       <guid>/docs/updating/</guid>
       <description>Downloading Download the latest zip-archive from the release page
-Web Panel  Backup your database in case of corruption Switch back to the default theme if haven&amp;rsquo;t already Upload and overwrite all contents in web to your SourceBans++ installation Delete install directory Navigate to your SourceBans++ website and append updater after it (Ex: example.com/updater, example.com/sb/updater) After it displays Installation up-to-date., delete updater directory and you are done  Plugin  Upload and overwrite all contents in game to your root game directory (Ex: tf, cs, etc) Reconfigure the config files in addons/sourcemod/configs/sourcebans/ Ensure everything is running smooth, and you are done  Plugin (Upgrading from version &amp;lt;= 1.</description>
+Web Panel  Backup your database in case of corruption
+ Switch back to the default theme if haven&amp;rsquo;t already
+ Upload and overwrite all contents in web to your SourceBans++ installation
+ Delete install directory
+ Navigate to your SourceBans++ website and append updater after it (Ex: example.com/updater, example.com/sb/updater)
+ After it displays Installation up-to-date., delete updater directory and you are done</description>
+    </item>
+    
+    <item>
+      <title>Discord Forward Setup</title>
+      <link>/docs/discord_forward_setup/</link>
+      <pubDate>Mon, 02 Apr 2018 17:48:49 -0400</pubDate>
+      
+      <guid>/docs/discord_forward_setup/</guid>
+      <description>Prerequisites  SteamWorks SMJansson  Installing  Grab the latest sbpp_discord.smx from here
+ Upload the plugin to addons/sourcemod/plugins
+  Configuring  Add the convar sbpp_discord_banhook and assign the value of the Discord webhook link for where you want ban messages to go
+ Add the convar sbpp_discord_reporthook and assign the value of the Discord webhook link for where you want report messages to go (If missing, it will default to sbpp_discord_reporthook&amp;rsquo;s convar value)</description>
     </item>
     
     <item>
@@ -69,7 +105,11 @@ Can&amp;rsquo;t connect to MySQL server Normally means that there is no MySQL se
       <pubDate>Wed, 21 Feb 2018 20:04:40 -0500</pubDate>
       
       <guid>/docs/debugging_connection/</guid>
-      <description>Check list  Your host is not blocking any traffic on your game server port (UDP Incoming &amp;amp; TCP Outgoing) Your game server is online to people outside of your network w/o any error on binding You can connect to server in-game You can use RCON through in-game console, if not view TCP Error below  Using the debug tool In SourceBans++&amp;rsquo;s root directory, there&amp;rsquo;s a connection debug tool named sb_debug_connection.</description>
+      <description>Check list  Your host is not blocking any traffic on your game server port (UDP Incoming &amp;amp; TCP Outgoing)
+ Your game server is online to people outside of your network w/o any error on binding
+ You can connect to server in-game
+ You can use RCON through in-game console, if not view TCP Error below
+  Using the debug tool In SourceBans++&amp;rsquo;s root directory, there&amp;rsquo;s a connection debug tool named sb_debug_connection.</description>
     </item>
     
     <item>
@@ -79,7 +119,10 @@ Can&amp;rsquo;t connect to MySQL server Normally means that there is no MySQL se
       
       <guid>/docs/mariadb/</guid>
       <description>Adding Repo sudo apt-get install software-properties-common sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8 sudo add-apt-repository &#39;deb [arch=amd64,i386,ppc64el] http://nyc2.mirrors.digitalocean.com/mariadb/repo/10.2/ubuntu xenial main&#39; sudo apt-get update  Installing sudo apt-get install mariadb-server  Setup Run mysql_secure_installation
-Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-server.cnf) Comment out bind-address by prefixing it with a #, so it looks like #bind-address = 127.0.0.1 Restart MySQL via sudo systemctl restart mysql  Granting Permission Sign in to MySQL shell via sudo mysql -u root -p and enter your password</description>
+Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-server.cnf)
+ Comment out bind-address by prefixing it with a #, so it looks like #bind-address = 127.0.0.1
+ Restart MySQL via sudo systemctl restart mysql
+  Granting Permission Sign in to MySQL shell via sudo mysql -u root -p and enter your password</description>
     </item>
     
     <item>
@@ -88,7 +131,11 @@ Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-s
       <pubDate>Sun, 18 Feb 2018 15:27:00 -0500</pubDate>
       
       <guid>/docs/adding_server/</guid>
-      <description> Adding server to web panel  Navigate to Admin Panel -&amp;gt; Server Settings -&amp;gt; Add new server Fill out the information about the server with correct RCON Password and click Add Server when done On refresh, record down the ID column for the corresponding server  Configuring SourceBans++&amp;rsquo;s ServerID  Navigate to addons/sourcemod/configs/sourcebans Edit sourcebans.cfg and modify ServerID to the ID value you recorded down Save, reupload file, and reload map/restart server  </description>
+      <description>Adding server to web panel  Navigate to Admin Panel -&amp;gt; Server Settings -&amp;gt; Add new server
+ Fill out the information about the server with correct RCON Password and click Add Server when done
+ On refresh, record down the ID column for the corresponding server
+  Configuring SourceBans++&amp;rsquo;s ServerID  Navigate to addons/sourcemod/configs/sourcebans
+ Edit sourcebans.cfg and modify ServerID to the ID value you recorded down</description>
     </item>
     
     <item>
@@ -97,7 +144,10 @@ Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-s
       <pubDate>Fri, 23 Feb 2018 21:56:16 -0500</pubDate>
       
       <guid>/docs/could_not_find_driver/</guid>
-      <description>Web  Ensure you have installed the mysql extension of your PHP version (Ex: php7.2-mysql) Ensure pdo_mysql module is loaded, check phpinfo() for this  Plugin  Please make sure dbi.mysql.ext.so (dbi.mysql.ext.dll on Windows) extension exists and check if it is loaded via sm exts list Make sure the extension is executable via chmod u+x dbi.mysql.ext.so Install zlib (Requires SSH Access)  32-Bit Debian/Ubuntu: apt-get install zlib1g 64-Bit Debian/Ubuntu: apt-get install lib32z1 32&amp;frasl;64-Bit Fedora: yum install zlib.</description>
+      <description>Web  Ensure you have installed the mysql extension of your PHP version (Ex: php7.2-mysql) Ensure pdo_mysql module is loaded, check phpinfo() for this  Plugin  Please make sure dbi.mysql.ext.so (dbi.mysql.ext.dll on Windows) extension exists and check if it is loaded via sm exts list
+ Make sure the extension is executable via chmod u+x dbi.mysql.ext.so
+ Install zlib (Requires SSH Access)
+ 32-Bit Debian/Ubuntu: apt-get install zlib1g</description>
     </item>
     
     <item>
@@ -106,7 +156,10 @@ Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-s
       <pubDate>Fri, 23 Feb 2018 21:52:44 -0500</pubDate>
       
       <guid>/docs/removing_default_message/</guid>
-      <description> Removal  Navigate to Admin Panel -&amp;gt; Webpanel Settings Edit the Intro Text Save Changes and you are done  </description>
+      <description> Removal  Navigate to Admin Panel -&amp;gt; Webpanel Settings
+ Edit the Intro Text
+ Save Changes and you are done
+  </description>
     </item>
     
     <item>
@@ -115,7 +168,9 @@ Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-s
       <pubDate>Fri, 23 Feb 2018 21:47:03 -0500</pubDate>
       
       <guid>/docs/ports/</guid>
-      <description> Web Panel  UDP Incoming on game server port TCP Outgoing on game server port  Game  Server Port ( UDP &amp;amp; TCP )  </description>
+      <description> Web Panel  UDP Incoming on game server port
+ TCP Outgoing on game server port
+  Game  Server Port ( UDP &amp;amp; TCP )  </description>
     </item>
     
     <item>
@@ -124,7 +179,9 @@ Configuring  Navigate to your MariaDB config (Ex: /etc/mysql/mariadb.conf.d/50-s
       <pubDate>Fri, 23 Feb 2018 11:58:42 -0500</pubDate>
       
       <guid>/docs/translating/</guid>
-      <description>Web Panel  Navigate to the root directory of your SourceBans++ installation&amp;rsquo;s themes folder Make a copy of the default theme, rename it to a name of your choosing and navigate to it Modify theme.conf.php to reflect the configuration and save
+      <description>Web Panel  Navigate to the root directory of your SourceBans++ installation&amp;rsquo;s themes folder
+ Make a copy of the default theme, rename it to a name of your choosing and navigate to it
+ Modify theme.conf.php to reflect the configuration and save
 &amp;lt;?php // Set the name of this theme here define(&#39;theme_name&#39;, &amp;quot;SourceBans++ Default Theme&amp;quot;); // Set the author of this theme here define(&#39;theme_author&#39;, &amp;quot;IceMan, SourceBans++ Dev Team&amp;quot;); // Set the version of the theme here define(&#39;theme_version&#39;, &amp;quot;1.</description>
     </item>
     

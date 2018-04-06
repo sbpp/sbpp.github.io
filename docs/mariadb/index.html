@@ -30,7 +30,7 @@
 
 <meta property="article:published_time" content="2018-02-18T20:30:47-05:00"/>
 
-<meta property="article:modified_time" content="2018-02-28T23:12:43-05:00"/>
+<meta property="article:modified_time" content="2018-04-02T18:06:26-04:00"/>
 
 
 
@@ -104,6 +104,10 @@ ga('send', 'pageview');
       <ul>
        
        
+    <li>
+      <a href="/blog/" > Blog</a>
+    </li>
+    
     <li>
       <a href="/docs/" > Docs</a>
     </li>
@@ -179,9 +183,11 @@ sudo apt-get update
 <h3 id="configuring">Configuring</h3>
 
 <ol>
-<li>Navigate to your MariaDB config (Ex: <samp>/etc/mysql/mariadb.conf.d/50-server.cnf</samp>)</li>
-<li>Comment out <code>bind-address</code> by prefixing it with a <code>#</code>, so it looks like <code>#bind-address = 127.0.0.1</code></li>
-<li>Restart MySQL via <code>sudo systemctl restart mysql</code></li>
+<li><p>Navigate to your MariaDB config (Ex: <samp>/etc/mysql/mariadb.conf.d/50-server.cnf</samp>)</p></li>
+
+<li><p>Comment out <code>bind-address</code> by prefixing it with a <code>#</code>, so it looks like <code>#bind-address = 127.0.0.1</code></p></li>
+
+<li><p>Restart MySQL via <code>sudo systemctl restart mysql</code></p></li>
 </ol>
 
 <h3 id="granting-permission">Granting Permission</h3>
@@ -191,9 +197,11 @@ sudo apt-get update
 <p>Run the following, adjusting it to suit your own needs</p>
 
 <ul>
-<li><mark>Username</mark> - The user you wish to create</li>
-<li><mark>Host</mark> - The host you wish to whitelist</li>
-<li><mark>Password</mark> - The password to use for the user creation</li>
+<li><p><mark>Username</mark> - The user you wish to create</p></li>
+
+<li><p><mark>Host</mark> - The host you wish to whitelist</p></li>
+
+<li><p><mark>Password</mark> - The password to use for the user creation</p></li>
 </ul>
 
 <pre><code>GRANT ALL PRIVILEGES ON *.* TO 'USERNAME'@'HOST' IDENTIFIED BY 'PASSWORD' WITH GRANT OPTION;
