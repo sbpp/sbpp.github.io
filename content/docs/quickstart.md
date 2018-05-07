@@ -18,6 +18,8 @@ Before we get started, let's make sure you meet these following requirements:
 
   * PHP Version >= 5.6
 
+        * GMP extension (for A2S queries)
+
 * Game
 
   * Sourcemod >= 1.7
