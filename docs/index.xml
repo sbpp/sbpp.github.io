@@ -21,7 +21,7 @@
  Web
  A working MySQL/MariaDB database
  PHP Version &amp;gt;= 5.6
-  Game
+ GMP extension (for A2S queries)   Game
  Sourcemod &amp;gt;= 1.7
  Metamod: Source
    If you&amp;rsquo;re using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.
