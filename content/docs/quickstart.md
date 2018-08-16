@@ -42,7 +42,7 @@ Before we get started, let's make sure you meet these following requirements:
 
 * `/demos` folder is writable (Linux: `sudo chmod -R 644 demos`)
 
-* `/themes_c` folder is writable (Linux: `sudo chmod -R 644 themes_c`)
+* `/themes_c` folder is writable (Linux: `sudo chmod -R 774 themes_c`)
 
 * `/images/games` folder is writable (Linux: `sudo chmod -R 644 /images/games`)
 
