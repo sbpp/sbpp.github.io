@@ -13,8 +13,6 @@ enableEmoji = true
   author = "SourceBans++"
   github = "sbpp"
   discord = "4Bhj6NU"
-  twitter = "RumbleFrog_"
-  email = "rumblefrog@protonmail.com"
 
 [Params.seo.webmaster_verifications]
   google = "NMu_qHiZPOvLzW1_DvAKrQfdQUAOdKxGnjbI8oa0cGo"
@@ -32,7 +30,7 @@ enableEmoji = true
     weight = -100
     url = "/faq/"
 [[menu.main]]
-    name = "Discord"
-    pre = "<i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i>&nbsp;"
+    name = " Discord"
+    pre = "<i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i>"
     weight = -99
     url = "https://discord.gg/4Bhj6NU"
