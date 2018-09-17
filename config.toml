@@ -33,6 +33,6 @@ enableEmoji = true
     url = "/faq/"
 [[menu.main]]
     name = "Discord"
-    pre = "<i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i>"
+    pre = "<i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i>&nbsp;"
     weight = -99
     url = "https://discord.gg/4Bhj6NU"
