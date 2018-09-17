@@ -36,7 +36,7 @@ Before we get started, let's make sure you meet these following requirements:
 
 * Upload everything that's within `game` to the game mod directory (`tf`, `cs`, `dod`, etc)
 
-### Write Permission
+### Write Permission (Make sure the files is under the web server user)
 
 * `config.php` file is writable (Linux: `sudo chmod 644 config.php`)
 
