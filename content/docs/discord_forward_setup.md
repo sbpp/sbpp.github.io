@@ -24,3 +24,5 @@ toc = true
 * Add the convar `sbpp_discord_banhook` and assign the value of the Discord webhook link for where you want ban messages to go
 
 * Add the convar `sbpp_discord_reporthook` and assign the value of the Discord webhook link for where you want report messages to go (If missing, it will default to `sbpp_discord_reporthook`'s convar value)
+
+Make sure to put these convars in an executable configuration file (preferably `autoexec.cfg`).
