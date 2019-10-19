@@ -3,43 +3,43 @@
 {{ define "main"}}
 
 <div id="main">
-  <div id="hero">
-    <h1>{{.Title}}</h1>
-    <p>{{.Description}}</p>
-  </div>
-  <div id="action-buttons">
-    <a class="button primary big" href="https://github.com/sbpp/sourcebans-pp/releases" onclick="ga('send', 'event', 'link', 'click', 'download');">Download</a>
-    <a class="button outline big" href="https://github.com/sbpp/sourcebans-pp/" onclick="ga('send', 'event', 'link', 'click', 'github');">View on Github</a>
-    <p>Zip-archive, includes all the source and site files</p>
-  </div>
-  <div class="message focus text-center" data-component="message"> <span class="close small"></span>
-    Version <mark>1.6.3</mark> is now available for download!
-  </div>
-  <div id="kube-features">
-    <div class="row gutters">
-      <div class="col col-4 item">
-        <figure>
-          <i class="far fa-clock fa-3x"></i>
-        </figure>
-        <h3>Long Term Support</h3>
-        <p>SourceBans++ has been supported since 2015! With the original starting back in 2009!</p>
-      </div>
-      <div class="col col-4 item">
-        <figure>
-          <i class="fas fa-users fa-3x"></i>
-        </figure>
-        <h3>Huge Community</h3>
-        <p>Over 2000 Servers run SourceBans++</p>
-      </div>
-      <div class="col col-4 item">
-        <figure>
-          <i class="fas fa-gamepad fa-3x"></i>
-        </figure>
-        <h3>Cross-Game Support</h3>
-        <p>SourceBans++ runs on variety of games that use the Source Engine, from Alien Swarm to CS:GO</p>
-      </div>
+    <div id="hero">
+        <h1>{{.Title}}</h1>
+        <p>{{.Description}}</p>
     </div>
-</div>
+    <div id="action-buttons">
+        <a class="button primary big" href="https://github.com/sbpp/sourcebans-pp/releases" onclick="ga('send', 'event', 'link', 'click', 'download');">Download</a>
+        <a class="button outline big" href="https://github.com/sbpp/sourcebans-pp/" onclick="ga('send', 'event', 'link', 'click', 'github');">View on Github</a>
+        <p>Zip-archive, includes all the source and site files</p>
+    </div>
+    <div class="message focus text-center" data-component="message"> <span class="close small"></span>
+        Version <mark>1.6.3</mark> is now available for download!
+    </div>
+    <div id="kube-features">
+        <div class="row gutters">
+            <div class="col col-4 item">
+                <figure>
+                    <i class="far fa-clock fa-3x"></i>
+                </figure>
+                <h3>Long Term Support</h3>
+                <p>SourceBans++ has been supported since 2015! With the original starting back in 2009!</p>
+            </div>
+            <div class="col col-4 item">
+                <figure>
+                    <i class="fas fa-users fa-3x"></i>
+                </figure>
+                <h3>Huge Community</h3>
+                <p>Over 2000 Servers run SourceBans++</p>
+            </div>
+            <div class="col col-4 item">
+                <figure>
+                    <i class="fas fa-gamepad fa-3x"></i>
+                </figure>
+                <h3>Cross-Game Support</h3>
+                <p>SourceBans++ runs on variety of games that use the Source Engine, from Alien Swarm to CS:GO</p>
+            </div>
+        </div>
+    </div>
 </div>
 {{ end }}
 {{ define "footer"}} {{ partial "footer" .}} {{end}}
