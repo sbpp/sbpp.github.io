@@ -32,5 +32,9 @@ enableEmoji = true
 [[menu.main]]
     name = " Discord"
     pre = "<i class='fab fa-discord' data-fa-transform='down-1' style='color:#7289DA'></i>"
-    weight = -99
+    weight = -98
     url = "https://discord.gg/4Bhj6NU"
+[[menu.main]]
+    name = "AM Subforum"
+    weight = -99
+    url = "https://forums.alliedmods.net/forumdisplay.php?f=152"
