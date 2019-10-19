@@ -17,10 +17,11 @@ install:
 
 #Download Hugo
 before_script:
-  - curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+  - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
   - sudo apt-get install -y nodejs
-  - npm install -g grunt-cli
-  - npm install
+  - npm i -g grunt-cli
+  - npm i -g yarn
+  - yarn
   - grunt content-index
   - mkdir binaries
   - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGOV}/hugo_${HUGOV}_Linux-64bit.tar.gz" -O binaries/hugo_${HUGOV}_Linux-64bit.tar.gz
