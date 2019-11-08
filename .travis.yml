@@ -9,7 +9,7 @@ addons:
 
 #Set the build environment
 env:
-  - HUGOV=0.58.3
+  - HUGOV=0.59.1
 
 #Clean and don't fail
 install:
