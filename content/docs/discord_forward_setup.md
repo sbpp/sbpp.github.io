@@ -13,6 +13,7 @@ toc = true
 * [SteamWorks](http://users.alliedmods.net/~kyles/builds/SteamWorks/)
 * [SMJansson](https://forums.alliedmods.net/showthread.php?t=184604)
 
+
 ### Installing
 
 1.  Grab the latest `sbpp_discord.smx` from [here](https://github.com/sbpp/discord-forward/releases)
@@ -25,4 +26,4 @@ toc = true
 
 * Add the convar `sbpp_discord_reporthook` and assign the value of the Discord webhook link for where you want report messages to go (If missing, it will default to `sbpp_discord_banhook`'s convar value)
 
-Make sure to put these convars in an executable configuration file (preferably `autoexec.cfg`).
+Make sure to put these convars in an executable configuration file (preferably `autoexec.cfg`). Please also keep in mind that this only pushes the notifications if action is taken in-game, it has no affect if you - for example - ban someone on the web panel.
