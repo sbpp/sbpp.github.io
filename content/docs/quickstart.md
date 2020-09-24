@@ -101,9 +101,12 @@ Append and edit the following
 	}
 ```
 
+Note: Whilst the webpanel will do its best to generate the above section for you, you should not rely on this being correct. Especially if your webserver (and database server) is on a different host to your game server. Also keep in mind that if your game server has to connect remotely, you may need to allow this with your database configuration. If you have problems here you would usually need to seek help from your webhost, not the SB++ support team.
+
 Save this file and upload the changes as required.
 
 You next need to add the server in the web portal and take note of the ServerID from the SB++ Web Panel. Then navigate to your  `addons/sourcemod/configs/sourcebans/` directory and edit <mark>sourcebans.cfg</mark> and update the "ServerID" parameter near the bottom of the file. Refer to the [Adding Server](/docs/adding_server) docs page for more info.
+
 
 ### Final Note
 
