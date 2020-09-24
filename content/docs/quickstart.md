@@ -17,7 +17,7 @@ Before we get started, let's make sure you meet these following requirements:
   * A working MySQL/[MariaDB](/docs/mariadb) database
 
   * PHP Version >= 5.6
-
+	* (PHP Version < 7.4 for SB++ 1.6.3 release)
         * GMP extension (for A2S queries)
 
 * Game
@@ -102,8 +102,9 @@ Append and edit the following
 	}
 ```
 
-Save, reupload, and restart server
+Save this file and upload the changes as required.
 
+You next need to add the server in the web portal and take note of the ServerID from the SB++ Web Panel. Then navigate to your  `addons/sourcemod/configs/sourcebans/` directory and edit <mark>sourcebans.cfg</mark> and update the "ServerID" parameter near the bottom of the file. Refer to the [Adding Server](/docs/adding_server) docs page for more info.
 ### Final Note
 
 Please take a look at our other docs if you are having difficulty installing
