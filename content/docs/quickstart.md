@@ -17,7 +17,7 @@ Before we get started, let's make sure you meet these following requirements:
   * A working MySQL/[MariaDB](/docs/mariadb) database
 
   * PHP Version >= 5.6
-	* (PHP Version < 7.4 for SB++ 1.6.3 release)
+        * (PHP Version < 7.4 for SB++ 1.6.3 release)
         * GMP extension (for A2S queries)
 
 * Game
