@@ -18,6 +18,12 @@ toc = true
 
 * You can use RCON through in-game console, if not view [TCP Error](#tcp-error) below
 
+### "Error connecting" in server list with current 1.6 release
+
+If you're using the current release 1.6 and experiencing connection issues in the server list (although everything looks fine in the debug tool), you should try and install the latest development version (1.x branch on GitHub). 
+
+Note: You need to use Composer for the latest development version.
+
 ### Using the debug tool
 
 In SourceBans++'s root directory, there's a connection debug tool named `sb_debug_connection.php`
