@@ -22,7 +22,7 @@ before_script:
   - sudo apt-get install -y nodejs
   - npm i -g grunt-cli
   - npm i -g yarn
-  - yarn
+  - yarn install --no-lockfile
   - grunt content-index
   - mkdir binaries
   - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGOV}/hugo_${HUGOV}_Linux-64bit.tar.gz" -O binaries/hugo_${HUGOV}_Linux-64bit.tar.gz
