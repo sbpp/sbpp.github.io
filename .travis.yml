@@ -1,5 +1,6 @@
 #Use the new container-based infrastructure
-sudo: false
+os: linux
+dist: xenial
 language: go
 
 #Install the apt prerequisites
@@ -9,7 +10,7 @@ addons:
 
 #Set the build environment
 env:
-  - HUGOV=0.59.1
+  - HUGOV=0.88.1
 
 #Clean and don't fail
 install:
@@ -17,7 +18,7 @@ install:
 
 #Download Hugo
 before_script:
-  - curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+  - curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   - sudo apt-get install -y nodejs
   - npm i -g grunt-cli
   - npm i -g yarn
@@ -36,13 +37,13 @@ script:
 
 #Deploy to GitHub pages
 deploy:
+  strategy: git 
   provider: pages
-  skip_cleanup: true
   local_dir: public
-  github_token: $GITHUB_TOKEN
-  keep-history: true
+  token: $GITHUB_TOKEN
+  keep_history: true
   fqdn: sbpp.dev
-  target-branch: master
+  target_branch: master
   on:
     branch: src
 
