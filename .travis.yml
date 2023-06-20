@@ -48,7 +48,6 @@ deploy:
   local_dir: public
   token: $GITHUB_TOKEN
   keep_history: true
-  fqdn: sbpp.dev
   target_branch: master
   on:
     branch: src
