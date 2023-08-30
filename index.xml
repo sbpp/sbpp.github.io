@@ -3,9 +3,9 @@
 Main: Now whenever a banned client joins, it will mend the IP column with the corresponding value if the column is previously empty with PR #406 closing issue #187</description></item><item><title>New Site</title><link>/blog/intro/</link><pubDate>Sat, 17 Feb 2018 23:31:41 -0500</pubDate><guid>/blog/intro/</guid><description>New Site Welcome to the new SourceBans++ site, this site is meant to serve as a replacement to the old one, featuring a brand new documentation, and FAQ pages</description></item><item><title>Quickstart</title><link>/docs/quickstart/</link><pubDate>Sat, 17 Feb 2018 20:47:15 -0500</pubDate><guid>/docs/quickstart/</guid><description>Prerequisites Before we get started, let&amp;rsquo;s make sure you meet these following requirements:
 Web
 A working MySQL/MariaDB database
-PHP Version &amp;gt;= 5.6 (and PHP Version &amp;lt; 7.4 for SB++ 1.6.3 release)
+PHP Version = 8.1.x (for SB++ 1.7.x release)
 GMP extension (for A2S queries) Game
-Sourcemod &amp;gt;= 1.7
+Sourcemod &amp;gt;= 1.10
 Metamod: Source
 If you&amp;rsquo;re using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.</description></item><item><title>Inquiries</title><link>/docs/inquiries/</link><pubDate>Sun, 18 Feb 2018 14:08:08 -0500</pubDate><guid>/docs/inquiries/</guid><description>PluginBan player option is missing in SourceMod&amp;rsquo;s admin menu! Most likely SourceMod&amp;rsquo;s basebans.smx was still loaded when you installed SourceBans' game plugin. The game plugin automatically disables basebans.smx, but your server needs to be restarted for the &amp;ldquo;Ban player&amp;rdquo; option to come available.
 Some hosters might disallow plugins to move files. Make sure the basebans.smx is in the plugins/disabled folder.
