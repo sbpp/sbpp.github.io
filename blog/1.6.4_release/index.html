@@ -4,18 +4,18 @@
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title> Browser Freeze </title>
-<meta name=description content="Solutions & debugging to unresponsiveness">
+<title> 1.6.4 Release 🔖 </title>
+<meta name=description content="Changes within 1.6.4 release">
 <meta name=author content="SourceBans++">
-<meta property="og:title" content="Browser Freeze">
-<meta property="og:description" content="Solutions & debugging to unresponsiveness">
+<meta property="og:title" content="1.6.4 Release 🔖">
+<meta property="og:description" content="Changes within 1.6.4 release">
 <meta property="og:type" content="article">
-<meta property="og:url" content="/docs/browser_freeze/"><meta property="article:section" content="docs">
-<meta property="article:published_time" content="2018-02-22T11:34:15-05:00">
-<meta property="article:modified_time" content="2018-02-22T12:05:46-05:00">
+<meta property="og:url" content="/blog/1.6.4_release/"><meta property="article:section" content="blog">
+<meta property="article:published_time" content="2021-12-25T10:01:01-05:00">
+<meta property="article:modified_time" content="2022-06-19T08:56:18-04:00">
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-68577666-5','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
-<link rel=canonical href=/docs/browser_freeze/>
+<link rel=canonical href=/blog/1.6.4_release/>
 <link rel=apple-touch-icon sizes=180x180 href=/img/favicons/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/img/favicons/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/img/favicons/favicon-16x16.png>
@@ -74,26 +74,55 @@
 </div>
 </header>
 <main>
-<div id=main>
+<div class=push-center itemscope itemtype=http://schema.org/BlogPosting>
+<meta itemprop=name content="1.6.4 Release 🔖">
+<meta itemprop=description content="Changes within 1.6.4 release"><meta itemprop=datePublished content="2021-12-25T10:01:01-05:00">
+<meta itemprop=dateModified content="2022-06-19T08:56:18-04:00">
+<meta itemprop=wordCount content="57">
+<meta itemprop=keywords content>
 <div id=hero>
-<h1> Browser Freeze </h1>
-<p class=hero-lead>
-Solution and steps to debug unresponsive pages.
+<h1 itemprop=headline> 1.6.4 Release 🔖</h1>
+<blockquote itemprop=description>Changes within 1.6.4 release</blockquote>
+<time class=post-time><span class=icon>
+<i class="far fa-clock" aria-hidden=true></i>
+</span>
+<span>1 minute read</span>
+<span class=icon>
+<i class="fas fa-pencil-alt" aria-hidden=true></i>
+</span>
+Modified: <time datetime=2022-06-19T08:56:18-04:00>19 Jun, 2022</time>
+</time>
+</div>
+<div id=post-box>
+<div id=post itemprop=articleBody>
+<h3 id=changes->Changes 🎨</h3>
+<ul>
+<li>Plugins
+<ul>
+<li>No functional changes, updated version to 1.6.4 to align with web.</li>
+</ul>
+</li>
+</ul>
+<h3 id=bug-fixes->Bug Fixes 🐛</h3>
+<ul>
+<li>Web
+<ul>
+<li>Fixes a security vulnerability that could leak your RCON password in the 1.6.3 release. Anyone that runs 1.6.3 should update immediately! Vulnerability found by <code>vellichor#9700</code>.</li>
+<li>Fixes connection to source games that have implemented the &ldquo;new&rdquo; challenge in A2S_INFO packets.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div>
+<p>
+Published
+by <span itemprop=author>SourceBans++</span>
+<time datetime=2021-12-25T10:01:01-05:00>
+25 Dec, 2021
+</time>
+using <span itemprop=wordCount>57</span> words.
 </p>
 </div>
-<div id=kube-component class=content>
-<nav id=contents>
-<ol class=js-toc>
-</ol>
-</nav>
-<script type=text/javascript>document.addEventListener("DOMContentLoaded",function(){tocbot.init({tocSelector:'.js-toc',contentSelector:'.content',headingSelector:'h3'})})</script>
-<h3 id=cloudflare>Cloudflare</h3>
-<p>If your site uses Cloudflare as reverse-proxy, make sure that Rocket Loader is <code>off</code></p>
-<p>Rocket Loader bundles mootools incorrect and cause unnecessary loop calls</p>
-<h3 id=debugging>Debugging</h3>
-<p>Most browsers bundles with a performance debugger, typically accessible via the hotkey <code>F12</code></p>
-<p>With the performance recorder open, start recording, navigate to the unresponsive page, end the recording after ~10 seconds and export it</p>
-<p>Join our <a href=https://discord.gg/4Bhj6NU>Discord</a> guild and post in #help-support with the exported performance file attached</p>
 </div>
 </div>
 </main>
