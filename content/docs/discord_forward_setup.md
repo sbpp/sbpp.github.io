@@ -22,8 +22,24 @@ toc = true
 
 ### Configuring
 
-* Add the convar `sbpp_discord_banhook` and assign the value of the Discord webhook link for where you want ban messages to go
+After loading the plugin once, SourceMod auto-generates `cfg/sourcemod/sbpp_discord.cfg` containing every convar below. Edit that file (or copy the convars to `autoexec.cfg`) and set the webhook URLs you want to use. Leave any hook empty to disable that channel.
 
-* Add the convar `sbpp_discord_reporthook` and assign the value of the Discord webhook link for where you want report messages to go (If missing, it will default to `sbpp_discord_banhook`'s convar value)
+#### Webhook endpoints
 
-Make sure to put these convars in an executable configuration file (preferably `autoexec.cfg`). Please also keep in mind that this only pushes the notifications if action is taken in-game, it has no affect if you - for example - ban someone on the web panel.
+* `sbpp_discord_banhook` — webhook for ban events
+
+* `sbpp_discord_reporthook` — webhook for in-game reports
+
+* `sbpp_discord_commshook` — webhook for communication blocks (mute/gag)
+
+#### Appearance & links
+
+* `sbpp_discord_username` — username shown on the webhook message (default: `Sourcebans++`)
+
+* `sbpp_discord_pp_url` — URL to a profile picture used by the webhook
+
+* `sbpp_website_url` — base URL of your SourceBans++ web panel; embeds will link admins/players back to it when set
+
+* `sbpp_discord_roleid` — Discord role ID to mention when a report comes in. Leave empty to disable the mention
+
+Please also keep in mind that this only pushes the notifications if action is taken in-game, it has no effect if you — for example — ban someone on the web panel.

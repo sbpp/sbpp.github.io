@@ -14,18 +14,24 @@ Before we get started, let's make sure you meet these following requirements:
 
 * Web
 
-  * A working MySQL/[MariaDB](/docs/mariadb) database
+  * A working MySQL (>= 5.6) or [MariaDB](/docs/mariadb) (>= 10.0) database
 
-  * PHP Version >= 5.6 (and PHP Version < 7.4 for SB++ 1.6.3 release)
-    * GMP extension (for A2S queries)
+  * PHP Version >= 8.2
+    * `memory_limit` >= 64M
+    * GMP extension
+    * PDO + `pdo_mysql`, OpenSSL, and XML extensions
+
+  * If installing from the `main` (development) branch, [Composer](https://getcomposer.org/) is required to pull web dependencies. Release archives ship with these pre-bundled.
 
 * Game
 
-  * Sourcemod >= 1.7
+  * SourceMod >= 1.11 (1.12 stable recommended)
 
   * Metamod: Source
 
   If you're using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.
+
+  > Note: if you are still on SB++ 1.6.x or older, see the [Updating](/docs/updating) guide before installing — these versions only support PHP < 7.4 and pre-1.11 SourceMod.
 
 ### Uploading
 
@@ -72,8 +78,6 @@ Navigate to your Sourcebans++ installer (`example.com/install`) to begin install
     - <mark>Table Prefix</mark> - The prefix you want the SourceBans++ tables to use, useful if there are name collisions, otherwise, leave it at default
 
     - <mark>Steam API Key</mark> - Your Steam API key, which can be obtained <a href="https://steamcommunity.com/dev/apikey" target="_blank_">here</a>
-
-    - <mark>SourceBans URL</mark> - Your SourceBans site with <samp>protocol</samp> included! (Ex: `https://example.com`), the <samp>http://</samp> or <samp>https://</samp> is <em>required</em>
 
     - <mark>SourceBans EMail</mark> - The email address to send password reset and/or ban submissions from, leave empty if you don't have one to use and don't plan to use it
 

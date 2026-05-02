@@ -26,6 +26,20 @@ Download the latest zip-archive from the <a href="https://github.com/sbpp/source
 
 6. After it displays <mark>Installation up-to-date.</mark>, delete <mark>updater</mark> directory and you are done
 
+### Web Panel (Upgrading from 1.6.x or 1.7.0 to 1.8.x)
+
+1.7.0+ requires PHP >= 8.2 (see [Quickstart](/docs/quickstart)) and adds a `SB_SECRET_KEY` value in <mark>config.php</mark> used by the JWT-based session manager. Existing installs need to populate it before logging in.
+
+1. Make sure your host is on PHP >= 8.2 before uploading the new files
+
+2. Follow the regular [Web Panel](#web-panel) steps above
+
+3. Navigate to <samp>example.com/upgrade.php</samp> in your browser. The script will append `SB_SECRET_KEY` to <mark>config.php</mark> and confirm with <mark>config.php updated correctly.</mark>
+
+4. Delete <mark>upgrade.php</mark> from your server when done — it can leak sensitive information if left exposed
+
+5. If you use a custom theme, note that Smarty 5 dropped the `{php}` tag — use the [`{load_template}`](https://github.com/sbpp/sourcebans-pp/blob/main/web/includes/SmartyCustomFunctions.php) tag instead
+
 ### Plugin
 
 1. Upload and overwrite all contents in <mark>game</mark> to your root game directory (Ex: <samp>tf</samp>, <samp>cs</samp>, etc)
