@@ -18,12 +18,6 @@ toc = true
 
 * You can use RCON through in-game console, if not view [TCP Error](#tcp-error) below
 
-### "Error connecting" in server list with current 1.6 release
-
-If you're using the current release 1.6 and experiencing connection issues in the server list (although everything looks fine in the debug tool), you should try and install the latest development version (1.x branch on GitHub). 
-
-Note: You need to use Composer for the latest development version.
-
 ### Using the debug tool
 
 In SourceBans++'s root directory, there's a connection debug tool named `sb_debug_connection.php`
@@ -35,9 +29,9 @@ Edit this section of that file with the corresponding server info
  * Config part
  * Change to IP and port of the gameserver you want to test
  */
-$serverip   = "";
-$serverport = 27015;
-$serverrcon = ""; // You only need to specify this, if you want to test the rcon tcp connection either! Leave blank if it's only the serverinfo erroring.
+$serverip = "";
+$serverport = ""; // Defaults to 27015 if left empty
+$serverrcon = ""; // Leave empty if you're only testing the serverinfo connection
 ```
 
 Once complete, navigate to the file in your browser, and if done properly it will attempt to connect to the specified server.

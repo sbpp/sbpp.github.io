@@ -10,7 +10,7 @@ toc = true
 
 ### Web
 
-* Ensure you have installed the mysql extension of your PHP version (Ex: <samp>php7.2-mysql</samp>)
+* Ensure you have installed the mysql extension of your PHP version (Ex: <samp>php8.2-mysql</samp>, replace `8.2` with whichever PHP version you have installed)
 * Ensure `pdo_mysql` module is loaded, check `phpinfo()` for this
 
 ### Plugin
