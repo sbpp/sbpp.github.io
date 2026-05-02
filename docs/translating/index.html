@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/translating/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2018-02-23T11:58:42-05:00">
-<meta property="article:modified_time" content="2018-04-02T18:06:26-04:00">
+<meta property="article:modified_time" content="2026-05-02T17:15:51-04:00">
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-68577666-5','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 <link rel=canonical href=/docs/translating/>
@@ -105,10 +105,10 @@ define('theme_name', &quot;SourceBans++ Default Theme&quot;);
 define('theme_author', &quot;IceMan, SourceBans++ Dev Team&quot;);
 
 // Set the version of the theme here
-define('theme_version', &quot;1.5.5-dev&quot;);
+define('theme_version', &quot;1.8.0-dev&quot;);
 
 // Set the link of the theme here
-define('theme_link', &quot;https://sbpp.sarabveer.me/&quot;);
+define('theme_link', &quot;https://github.com/sbpp/sourcebans-pp&quot;);
 
 // Set the screenshot filename for your theme (must be inside your theme folder)
 // Must be:  250px wide  X 170px High
@@ -123,13 +123,16 @@ define('theme_screenshot', &quot;screenshot.jpg&quot;);
 <p>Modify the body content of the file</p>
 </li>
 </ol>
+<blockquote>
+<p>Note: SourceBans++ 1.7.0+ uses Smarty 5, which dropped the <code>{php}</code> tag. Custom themes that previously used <code>{php}</code> must switch to the <a href=https://github.com/sbpp/sourcebans-pp/blob/main/web/includes/SmartyCustomFunctions.php><code>{load_template}</code></a> tag.</p>
+</blockquote>
 <h3 id=plugin>Plugin</h3>
 <ol>
 <li>
 <p>Navigate to SourceMod&rsquo;s <code>translations</code> directory</p>
 </li>
 <li>
-<p>The files you will need to modify are sourcebans.phrases.txt, sourcecomms.phrases.txt, and sourcesleuth.phrases.txt</p>
+<p>The files you will need to modify are sbpp_main.phrases.txt, sbpp_comms.phrases.txt, sbpp_sleuth.phrases.txt, sbpp_report.phrases.txt, and sbpp_checker.phrases.txt</p>
 </li>
 <li>
 <p>Within <code>Phrases</code> key section, for each sub key sections, append a key value pair, with the two letter language code being the key and the value being the translation (If <code>#format</code> kv pair is present, be sure to follow it)</p>

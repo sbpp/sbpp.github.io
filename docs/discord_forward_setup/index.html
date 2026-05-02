@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/discord_forward_setup/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2018-04-02T17:48:49-04:00">
-<meta property="article:modified_time" content="2020-08-04T11:28:54+01:00">
+<meta property="article:modified_time" content="2026-05-02T17:15:51-04:00">
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-68577666-5','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 <link rel=canonical href=/docs/discord_forward_setup/>
@@ -102,15 +102,35 @@ Setting up and configuring Discord forward plugin.
 </li>
 </ol>
 <h3 id=configuring>Configuring</h3>
+<p>After loading the plugin once, SourceMod auto-generates <code>cfg/sourcemod/sbpp_discord.cfg</code> containing every convar below. Edit that file (or copy the convars to <code>autoexec.cfg</code>) and set the webhook URLs you want to use. Leave any hook empty to disable that channel.</p>
+<h4 id=webhook-endpoints>Webhook endpoints</h4>
 <ul>
 <li>
-<p>Add the convar <code>sbpp_discord_banhook</code> and assign the value of the Discord webhook link for where you want ban messages to go</p>
+<p><code>sbpp_discord_banhook</code> — webhook for ban events</p>
 </li>
 <li>
-<p>Add the convar <code>sbpp_discord_reporthook</code> and assign the value of the Discord webhook link for where you want report messages to go (If missing, it will default to <code>sbpp_discord_banhook</code>&rsquo;s convar value)</p>
+<p><code>sbpp_discord_reporthook</code> — webhook for in-game reports</p>
+</li>
+<li>
+<p><code>sbpp_discord_commshook</code> — webhook for communication blocks (mute/gag)</p>
 </li>
 </ul>
-<p>Make sure to put these convars in an executable configuration file (preferably <code>autoexec.cfg</code>). Please also keep in mind that this only pushes the notifications if action is taken in-game, it has no affect if you - for example - ban someone on the web panel.</p>
+<h4 id=appearance--links>Appearance & links</h4>
+<ul>
+<li>
+<p><code>sbpp_discord_username</code> — username shown on the webhook message (default: <code>Sourcebans++</code>)</p>
+</li>
+<li>
+<p><code>sbpp_discord_pp_url</code> — URL to a profile picture used by the webhook</p>
+</li>
+<li>
+<p><code>sbpp_website_url</code> — base URL of your SourceBans++ web panel; embeds will link admins/players back to it when set</p>
+</li>
+<li>
+<p><code>sbpp_discord_roleid</code> — Discord role ID to mention when a report comes in. Leave empty to disable the mention</p>
+</li>
+</ul>
+<p>Please also keep in mind that this only pushes the notifications if action is taken in-game, it has no effect if you — for example — ban someone on the web panel.</p>
 </div>
 </div>
 </main>

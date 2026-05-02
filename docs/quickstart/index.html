@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/quickstart/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2018-02-17T20:47:15-05:00">
-<meta property="article:modified_time" content="2020-10-23T22:18:21+01:00">
+<meta property="article:modified_time" content="2026-05-02T17:15:51-04:00">
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-68577666-5','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 <link rel=canonical href=/docs/quickstart/>
@@ -94,13 +94,18 @@ This will be a quick walkthrough of setting up SourceBans++ for the first time.
 <p>Web</p>
 <ul>
 <li>
-<p>A working MySQL/<a href=/docs/mariadb>MariaDB</a> database</p>
+<p>A working MySQL (>= 5.6) or <a href=/docs/mariadb>MariaDB</a> (>= 10.0) database</p>
 </li>
 <li>
-<p>PHP Version >= 5.6 (and PHP Version &lt; 7.4 for SB++ 1.6.3 release)</p>
+<p>PHP Version >= 8.2</p>
 <ul>
-<li>GMP extension (for A2S queries)</li>
+<li><code>memory_limit</code> >= 64M</li>
+<li>GMP extension</li>
+<li>PDO + <code>pdo_mysql</code>, OpenSSL, and XML extensions</li>
 </ul>
+</li>
+<li>
+<p>If installing from the <code>main</code> (development) branch, <a href=https://getcomposer.org/>Composer</a> is required to pull web dependencies. Release archives ship with these pre-bundled.</p>
 </li>
 </ul>
 </li>
@@ -108,13 +113,16 @@ This will be a quick walkthrough of setting up SourceBans++ for the first time.
 <p>Game</p>
 <ul>
 <li>
-<p>Sourcemod >= 1.7</p>
+<p>SourceMod >= 1.11 (1.12 stable recommended)</p>
 </li>
 <li>
 <p>Metamod: Source</p>
 </li>
 </ul>
 <p>If you&rsquo;re using Cloudflare, Rocket Loader must be disabled otherwise SourceBans++ will become unresponsive.</p>
+<blockquote>
+<p>Note: if you are still on SB++ 1.6.x or older, see the <a href=/docs/updating>Updating</a> guide before installing — these versions only support PHP &lt; 7.4 and pre-1.11 SourceMod.</p>
+</blockquote>
 </li>
 </ul>
 <h3 id=uploading>Uploading</h3>
@@ -178,9 +186,6 @@ within a directory other than the root directory (Ex: <code>example.com/sb/</cod
 </li>
 <li>
 <p>Steam API Key - Your Steam API key, which can be obtained here</p>
-</li>
-<li>
-<p>SourceBans URL - Your SourceBans site with protocol included! (Ex: <code>https://example.com</code>), the http:// or https:// is required</p>
 </li>
 <li>
 <p>SourceBans EMail - The email address to send password reset and/or ban submissions from, leave empty if you don&rsquo;t have one to use and don&rsquo;t plan to use it</p>

@@ -12,7 +12,7 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="/docs/updating/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2018-02-18T15:49:01-05:00">
-<meta property="article:modified_time" content="2018-04-02T18:06:26-04:00">
+<meta property="article:modified_time" content="2026-05-02T17:15:51-04:00">
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-68577666-5','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 <link rel=canonical href=/docs/updating/>
@@ -108,6 +108,25 @@ Simple guide on updating SourceBans++.
 </li>
 <li>
 <p>After it displays Installation up-to-date., delete updater directory and you are done</p>
+</li>
+</ol>
+<h3 id=web-panel-upgrading-from-16x-or-170-to-18x>Web Panel (Upgrading from 1.6.x or 1.7.0 to 1.8.x)</h3>
+<p>1.7.0+ requires PHP >= 8.2 (see <a href=/docs/quickstart>Quickstart</a>) and adds a <code>SB_SECRET_KEY</code> value in config.php used by the JWT-based session manager. Existing installs need to populate it before logging in.</p>
+<ol>
+<li>
+<p>Make sure your host is on PHP >= 8.2 before uploading the new files</p>
+</li>
+<li>
+<p>Follow the regular <a href=#web-panel>Web Panel</a> steps above</p>
+</li>
+<li>
+<p>Navigate to example.com/upgrade.php in your browser. The script will append <code>SB_SECRET_KEY</code> to config.php and confirm with config.php updated correctly.</p>
+</li>
+<li>
+<p>Delete upgrade.php from your server when done — it can leak sensitive information if left exposed</p>
+</li>
+<li>
+<p>If you use a custom theme, note that Smarty 5 dropped the <code>{php}</code> tag — use the <a href=https://github.com/sbpp/sourcebans-pp/blob/main/web/includes/SmartyCustomFunctions.php><code>{load_template}</code></a> tag instead</p>
 </li>
 </ol>
 <h3 id=plugin>Plugin</h3>
