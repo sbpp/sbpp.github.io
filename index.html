@@ -50,9 +50,6 @@
 <nav id=top-nav-main>
 <ul>
 <li>
-<a href=/blog/> Blog</a>
-</li>
-<li>
 <a href=/docs/> Docs</a>
 </li>
 <li>
@@ -79,13 +76,14 @@
 <p></p>
 </div>
 <div id=action-buttons>
-<a class="button primary big" href=https://github.com/sbpp/sourcebans-pp/releases onclick="ga('send','event','link','click','download')">Download</a>
+<a id=download-link class="button primary big" href=https://github.com/sbpp/sourcebans-pp/releases/latest onclick="ga('send','event','link','click','download')">Download</a>
 <a class="button outline big" href=https://github.com/sbpp/sourcebans-pp/ onclick="ga('send','event','link','click','github')">View on Github</a>
 <p>Zip-archive, includes all the source and site files</p>
 </div>
 <div class="message focus text-center" data-component=message> <span class="close small"></span>
-Version <mark>1.7.0</mark> is now available for download!
+<span id=latest-release-message>The latest version is now available for download!</span>
 </div>
+<script>(function(){fetch('https://api.github.com/repos/sbpp/sourcebans-pp/releases/latest',{headers:{Accept:'application/vnd.github+json'}}).then(function(a){return a.ok?a.json():null}).then(function(a){var d,b,c;if(!a||!a.tag_name)return;d=a.tag_name.replace(/^v/i,''),b=document.getElementById('latest-release-message'),b&&(b.innerHTML='Version <mark></mark> is now available for download!',b.querySelector('mark').textContent=d),c=document.getElementById('download-link'),c&&a.html_url&&(c.href=a.html_url)}).catch(function(){})})()</script>
 <div id=kube-features>
 <div class="row gutters">
 <div class="col col-4 item">
@@ -116,9 +114,6 @@ Version <mark>1.7.0</mark> is now available for download!
 <footer> <footer id=footer>
 <nav>
 <ul>
-<li>
-<a href=/blog/>Blog</a>
-</li>
 <li>
 <a href=/docs/>Docs</a>
 </li>
