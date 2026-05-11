@@ -96,12 +96,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v5
         with:
-          # Match sibling `sourcebans-pp/.github/workflows/docs-build.yml`
-          # and the documented floor in `sourcebans-pp/docs/README.md`
-          # ("Node 20 LTS or newer"). Asymmetry between the validation
-          # gate and the deploy would mean a build that passes CI could
-          # still fail here.
-          node-version: '20'
+          # Astro requires Node >=22.12.0 (build fails on 20 with an
+          # explicit unsupported-engine error). Keep this in lockstep
+          # with sibling `sourcebans-pp/.github/workflows/docs-build.yml`
+          # and the documented floor in `sourcebans-pp/docs/README.md`:
+          # asymmetry between the validation gate and the deploy would
+          # mean a build that passes CI could still fail here.
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: docs/package-lock.json
 
