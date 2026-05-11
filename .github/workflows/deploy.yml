@@ -78,10 +78,18 @@ jobs:
 
     steps:
       - name: Checkout sourcebans-pp (docs source)
+        # Precedence: dispatched runs (repository_dispatch from
+        # `sourcebans-pp/.github/workflows/docs-deploy-trigger.yml`)
+        # carry the source commit SHA in the client payload — pin to it
+        # so two pushes A, B in quick succession don't race (A's deploy
+        # would otherwise check out main and silently rebuild from B).
+        # workflow_dispatch and schedule have no payload, so they fall
+        # through to the floating `main` ref by design (manual reruns
+        # and the weekly safety net both want the latest).
         uses: actions/checkout@v5
         with:
           repository: sbpp/sourcebans-pp
-          ref: main
+          ref: ${{ github.event.client_payload.source_sha || 'main' }}
 
       - name: Setup Node
         uses: actions/setup-node@v5
