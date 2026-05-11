@@ -44,16 +44,38 @@ permissions:
 # Allow only one concurrent deployment, but never cancel an in-flight one —
 # Pages deploys should always finish to avoid leaving the site in a
 # half-published state. Standard `actions/deploy-pages` convention.
+#
+# Group name matches the issue #1333 §6 spec (`pages-deploy`) rather than
+# GitHub's example default (`pages`). Since this is the only workflow in
+# this repo that touches Pages, either choice serializes the same set of
+# runs — we just track the spec verbatim so the cross-repo intent is
+# obvious to anyone diffing the cutover.
 concurrency:
-  group: pages
+  group: pages-deploy
   cancel-in-progress: false
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    # Pinned (not `ubuntu-latest`) to match sibling
+    # `sbpp/sourcebans-pp/.github/workflows/docs-build.yml` so the build
+    # validation gate and the deploy run on byte-identical runner images.
+    runs-on: ubuntu-24.04
+    # Belt-and-suspenders against an upstream npm/Astro hang. Sibling
+    # `docs-screenshots.yml` uses 30; the deploy is build-only (no
+    # docker-compose / Playwright), so 15 is comfortably above the
+    # observed steady-state runtime.
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    # All `run:` steps below operate inside `docs/`. `cache-dependency-path`
+    # and `path:` inputs to `uses:` actions stay rooted at the workspace
+    # because action inputs are interpreted relative to the workspace, not
+    # the job's `working-directory` default.
+    defaults:
+      run:
+        working-directory: docs
+
     steps:
       - name: Checkout sourcebans-pp (docs source)
         uses: actions/checkout@v4
@@ -64,16 +86,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          # Match sibling `sourcebans-pp/.github/workflows/docs-build.yml`
+          # and the documented floor in `sourcebans-pp/docs/README.md`
+          # ("Node 20 LTS or newer"). Asymmetry between the validation
+          # gate and the deploy would mean a build that passes CI could
+          # still fail here.
+          node-version: '20'
           cache: 'npm'
           cache-dependency-path: docs/package-lock.json
 
       - name: Install dependencies
-        working-directory: docs
         run: npm ci
 
       - name: Build site
-        working-directory: docs
         run: npm run build
 
       - name: Upload Pages artifact
