@@ -8,10 +8,11 @@
 # Triggers:
 #   - repository_dispatch (event type: docs-changed) — fired by
 #     `.github/workflows/docs-deploy-trigger.yml` in `sbpp/sourcebans-pp` after a
-#     push to main that touches `docs/**`. The dispatcher mints a short-lived
-#     installation token via the org-owned `sbpp-docs-deploy` GitHub App
-#     (Actions: write scope on this repo only) so we never need a PAT.
+#     push to main that touches `docs/**`. The dispatcher authenticates with a
+#     fine-grained PAT (`Actions: write` scope on this repo only) stored as
+#     `secrets.DOCS_DEPLOY_PAT` over there.
 #   - workflow_dispatch — manual button in the Actions UI for forced redeploys.
+#     Always available; no credentials needed (runs entirely inside this repo).
 #   - schedule (weekly Sunday) — safety net in case a dispatch is dropped, the
 #     upstream source is unreachable at dispatch time, or a previous deploy
 #     failed silently.
@@ -19,11 +20,12 @@
 # MANUAL SETUP REQUIRED (see issue #1333 cutover steps; cannot be configured in
 # workflow YAML):
 #   - Settings → Pages → Source must be set to "GitHub Actions" (UI-only).
-#   - The `sbpp-docs-deploy` GitHub App must exist with `Actions: write` scope on
-#     this repo, be installed on this repo, and have its App ID + private key
-#     registered as `vars.DOCS_DEPLOY_APP_ID` + `secrets.DOCS_DEPLOY_APP_KEY` in
-#     `sbpp/sourcebans-pp` (consumed by the dispatcher there — not by anything
-#     here).
+#   - For automatic deploys on docs PR merges (optional — `workflow_dispatch`
+#     and the weekly cron cover the bases otherwise): create a fine-grained PAT
+#     scoped to `sbpp/sbpp.github.io` only with the `Actions: Read and write`
+#     repository permission, then register it on `sbpp/sourcebans-pp` as
+#     `secrets.DOCS_DEPLOY_PAT`. The dispatcher there picks it up; no setup
+#     is needed in this repo.
 
 name: Deploy docs to Pages
 
