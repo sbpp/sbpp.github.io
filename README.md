@@ -1,19 +1,18 @@
-# SourceBans++ Website [![Build and Deploy](https://github.com/sbpp/sbpp.github.io/actions/workflows/deploy.yml/badge.svg?branch=src)](https://github.com/sbpp/sbpp.github.io/actions/workflows/deploy.yml)
+# SourceBans++ Docs (deploy shell)
 
-### Adding Articles
+This repository is the GitHub Pages deploy target for the SourceBans++ documentation site at <https://sbpp.github.io/>.
 
-- Fork this repository
-- From Hugo CLI, generate appropriate kind of article using the archetypes provided, to the corresponding folder
-- Fill in the front matter and content
-- Submit pull request
+**Source lives in [`sbpp/sourcebans-pp` under `docs/`](https://github.com/sbpp/sourcebans-pp/tree/main/docs).** Open PRs there.
 
-### Contribute to Translation
+Pages is configured to build from GitHub Actions (Settings → Pages → Source: GitHub Actions). The workflow in `.github/workflows/deploy.yml` checks out `sourcebans-pp@main`, builds `docs/`, and deploys via `actions/deploy-pages`. It runs on `repository_dispatch` from `sourcebans-pp` (event type `docs-changed`), on `workflow_dispatch`, and on a weekly schedule as a safety net.
 
-- Fork this repository
-- Translate the files in `content/` by making another copy of the article and appending to the extension
-  - Ex: `content/docs/updating.md` -> `content/docs/updating.fr.md`
-  - You may also explicitly set `translationKey` in front matter within the article for good measures
-- Create a new block within `config.toml` adding the language translations for the global variables
-- Submit pull request
+## Local preview
 
-##### For more information, view [Hugo's Documentation](https://gohugo.io/documentation/)
+To preview the docs locally, clone `sourcebans-pp` and run the Starlight dev server:
+
+```sh
+git clone https://github.com/sbpp/sourcebans-pp.git
+cd sourcebans-pp/docs
+npm install
+npm run dev
+```
