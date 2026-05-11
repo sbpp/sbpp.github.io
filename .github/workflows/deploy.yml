@@ -24,9 +24,8 @@
 #     and the weekly cron cover the bases otherwise): create a fine-grained PAT
 #     scoped to `sbpp/sbpp.github.io` only with the `Actions: Read and write`
 #     repository permission, then register it on `sbpp/sourcebans-pp` as
-#     `secrets.DOCS_DEPLOY_PAT` and set `vars.DOCS_DEPLOY_ENABLED` to any
-#     non-empty value. The dispatcher there picks both up; no setup is needed
-#     in this repo.
+#     `secrets.DOCS_DEPLOY_PAT`. The dispatcher there picks it up; no setup
+#     is needed in this repo.
 
 name: Deploy docs to Pages
 
