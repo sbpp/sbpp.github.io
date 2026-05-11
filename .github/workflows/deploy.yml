@@ -1,55 +1,86 @@
-name: Build and Deploy
+# SourceBans++ docs deploy workflow (cutover deliverable for issue #1333).
+#
+# This repo is the GitHub Pages deploy target for <https://sbpp.github.io/>.
+# The docs source lives in `sbpp/sourcebans-pp` under `docs/` (Astro Starlight);
+# this workflow checks that repo out, builds the site, and publishes via
+# GitHub's first-party `actions/deploy-pages`.
+#
+# Triggers:
+#   - repository_dispatch (event type: docs-changed) — fired by
+#     `.github/workflows/docs-deploy-trigger.yml` in `sbpp/sourcebans-pp` after a
+#     push to main that touches `docs/**`. The dispatcher mints a short-lived
+#     installation token via the org-owned `sbpp-docs-deploy` GitHub App
+#     (Actions: write scope on this repo only) so we never need a PAT.
+#   - workflow_dispatch — manual button in the Actions UI for forced redeploys.
+#   - schedule (weekly Sunday) — safety net in case a dispatch is dropped, the
+#     upstream source is unreachable at dispatch time, or a previous deploy
+#     failed silently.
+#
+# MANUAL SETUP REQUIRED (see issue #1333 cutover steps; cannot be configured in
+# workflow YAML):
+#   - Settings → Pages → Source must be set to "GitHub Actions" (UI-only).
+#   - The `sbpp-docs-deploy` GitHub App must exist with `Actions: write` scope on
+#     this repo, be installed on this repo, and have its App ID + private key
+#     registered as `vars.DOCS_DEPLOY_APP_ID` + `secrets.DOCS_DEPLOY_APP_KEY` in
+#     `sbpp/sourcebans-pp` (consumed by the dispatcher there — not by anything
+#     here).
+
+name: Deploy docs to Pages
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [docs-changed]
   workflow_dispatch:
+  schedule:
+    # Weekly safety net at Sunday 05:17 UTC. Non-zero minute avoids GitHub's
+    # top-of-hour cron congestion (per their scheduled-events docs).
+    - cron: '17 5 * * 0'
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
+# Allow only one concurrent deployment, but never cancel an in-flight one —
+# Pages deploys should always finish to avoid leaving the site in a
+# half-published state. Standard `actions/deploy-pages` convention.
 concurrency:
-  group: pages-deploy
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.88.1
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
+      - name: Checkout sourcebans-pp (docs source)
         uses: actions/checkout@v4
         with:
-          submodules: true
-          fetch-depth: 0
+          repository: sbpp/sourcebans-pp
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: lts/*
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: ${{ env.HUGO_VERSION }}
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: docs/package-lock.json
 
       - name: Install dependencies
-        run: |
-          npm install -g grunt-cli yarn
-          yarn set version latest
-          yarn install --no-lockfile
-
-      - name: Build content index
-        run: grunt content-index
+        working-directory: docs
+        run: npm ci
 
       - name: Build site
-        run: hugo --minify
+        working-directory: docs
+        run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: master
+        id: deployment
+        uses: actions/deploy-pages@v4
